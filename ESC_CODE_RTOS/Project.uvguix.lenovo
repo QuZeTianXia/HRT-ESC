@@ -3615,7 +3615,7 @@
       </Doc>
       <Doc>
         <Name>.\Hardware\GPIO.c</Name>
-        <ColumnNumber>25</ColumnNumber>
+        <ColumnNumber>31</ColumnNumber>
         <TopLine>1</TopLine>
         <CurrentLine>16</CurrentLine>
         <Folding>1</Folding>
@@ -3642,9 +3642,9 @@
       </Doc>
       <Doc>
         <Name>.\FreeRTOS\Processes.c</Name>
-        <ColumnNumber>56</ColumnNumber>
-        <TopLine>129</TopLine>
-        <CurrentLine>236</CurrentLine>
+        <ColumnNumber>4</ColumnNumber>
+        <TopLine>128</TopLine>
+        <CurrentLine>237</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3687,9 +3687,9 @@
       </Doc>
       <Doc>
         <Name>.\Hardware\CAN.c</Name>
-        <ColumnNumber>6</ColumnNumber>
+        <ColumnNumber>10</ColumnNumber>
         <TopLine>146</TopLine>
-        <CurrentLine>157</CurrentLine>
+        <CurrentLine>158</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
