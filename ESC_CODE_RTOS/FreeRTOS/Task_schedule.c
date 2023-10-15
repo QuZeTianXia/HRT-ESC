@@ -41,6 +41,16 @@ TaskHandle_t Turn_on_TimingTask_Handler;
 void Turn_on_Timing_Task(void *pvParameters);
 
 
+//状态切换控制任务函数
+//任务优先级
+#define State_Switch_Control_TASK_PRIO		 3
+//任务堆栈大小	
+#define State_Switch_Control_STK_SIZE 		64  
+//任务句柄
+TaskHandle_t State_Switch_ControlTask_Handler;
+//任务函数
+void State_Switch_Control_Task(void *pvParameters);
+
 
 
 //@PWM任务 
@@ -53,6 +63,16 @@ TaskHandle_t PWMTask_Handler;
 //任务函数
 void PWM_Task(void *pvParameters);
 
+
+//@状态切换任务 
+//任务优先级
+#define State_Switch_TASK_PRIO		 3
+//任务堆栈大小	
+#define State_Switch_STK_SIZE 		64  
+//任务句柄
+TaskHandle_t State_SwitchTask_Handler;
+//任务函数
+void State_Switch_Task(void *pvParameters);
 
 
 //@ESC的REST任务函数
@@ -92,6 +112,13 @@ void Start_Task(void *pvParameters)
                 (UBaseType_t    )Turn_on_Timing_TASK_PRIO,
                 (TaskHandle_t*  )&Turn_on_TimingTask_Handler);    				
   
+//	 //创建状态切换控制任务
+//    xTaskCreate((TaskFunction_t )State_Switch_Control_Task,     
+//                (const char*    )"State_Switch_Control_Task",   
+//                (uint16_t       )State_Switch_Control_STK_SIZE, 
+//                (void*          )NULL,
+//                (UBaseType_t    )State_Switch_Control_TASK_PRIO,
+//                (TaskHandle_t*  )&State_Switch_ControlTask_Handler);   
 				
 	 //创建PWM任务
     xTaskCreate((TaskFunction_t )PWM_Task,     
@@ -101,7 +128,13 @@ void Start_Task(void *pvParameters)
                 (UBaseType_t    )PWM_TASK_PRIO,
                 (TaskHandle_t*  )&PWMTask_Handler);  
 				
-
+//	 //@状态切换任务 	
+//    xTaskCreate((TaskFunction_t )State_Switch_Task,     
+//                (const char*    )"State_Switch_Task",   
+//                (uint16_t       )State_Switch_STK_SIZE, 
+//                (void*          )NULL,
+//                (UBaseType_t    )State_Switch_TASK_PRIO,
+//                (TaskHandle_t*  )&State_SwitchTask_Handler);  
 				
 				
 	//ESC的REST任务函数	

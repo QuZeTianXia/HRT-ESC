@@ -146,7 +146,7 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 	//From:EBS//content:current oil pressure//Fre:20Hz
 	if(RxMessage.StdId==0x402&&RxMessage.IDE==0)  //µ±«∞”Õ—π
 	{
-		LF_PRE = RxMessage.Data[0] + RxMessage.Data[1]*256 ;
+//		LF_PRE = RxMessage.Data[0] + RxMessage.Data[1]*256 ;
 		RF_PRE = RxMessage.Data[2] + RxMessage.Data[3]*256 ;
 		LB_PRE = RxMessage.Data[4] + RxMessage.Data[5]*256 ;
 		RB_PRE = RxMessage.Data[6] + RxMessage.Data[7]*256 ;
@@ -168,7 +168,7 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 			RB_Target = RxMessage.Data[0] + RxMessage.Data[1]*256 ;
 			RF_Target = RxMessage.Data[2] + RxMessage.Data[3]*256 ;
 			LB_Target = RxMessage.Data[4] + RxMessage.Data[5]*256 ;
-			LF_Target = RxMessage.Data[6] + RxMessage.Data[7]*256 ;
+//			LF_Target = RxMessage.Data[6] + RxMessage.Data[7]*256 ;
 		 }
 	 }
 	 
