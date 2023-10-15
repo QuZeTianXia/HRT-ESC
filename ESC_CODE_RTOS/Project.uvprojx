@@ -658,6 +658,16 @@
               <FileType>5</FileType>
               <FilePath>.\Library\Delay.h</FilePath>
             </File>
+            <File>
+              <FileName>MyFLASH.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Library\MyFLASH.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyFLASH.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Library\MyFLASH.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -792,6 +802,16 @@
               <FileName>FreeRTOSConfig.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\FreeRTOSConfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>Store.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\Store.c</FilePath>
+            </File>
+            <File>
+              <FileName>Store.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\Store.h</FilePath>
             </File>
           </Files>
         </Group>

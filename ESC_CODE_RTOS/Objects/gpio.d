@@ -48,3 +48,4 @@
 .\objects\gpio.o: Hardware\CAN.h
 .\objects\gpio.o: Hardware\oled.h
 .\objects\gpio.o: D:\EnglishDownload\keil-v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\gpio.o: .\User\Store.h

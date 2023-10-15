@@ -10,6 +10,7 @@
 #include "KEY.h"
 #include "CAN.h"
 #include "oled.h"
+#include "Store.h"
 
 #define LED1_Pin           GPIO_Pin_14 
 #define LED1_Port          GPIOB
@@ -98,6 +99,9 @@ extern uint8_t ESC_Back_Switch_Flag;
 extern uint16_t LFOUT,RFOUT,LBOUT,RBOUT;
 
 extern uint8_t normal_mode;
+
+#define Quick_Accelerate  Store_Data[1]
+#define Slow_Accelerate  Store_Data[2]
 
 
 #define Quick_UP          0x0A

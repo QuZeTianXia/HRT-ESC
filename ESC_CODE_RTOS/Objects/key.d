@@ -48,3 +48,4 @@
 .\objects\key.o: Hardware\CAN.h
 .\objects\key.o: Hardware\oled.h
 .\objects\key.o: D:\EnglishDownload\keil-v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\key.o: .\User\Store.h

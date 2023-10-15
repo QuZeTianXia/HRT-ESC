@@ -48,3 +48,4 @@
 .\objects\pwm.o: Hardware\CAN.h
 .\objects\pwm.o: Hardware\oled.h
 .\objects\pwm.o: D:\EnglishDownload\keil-v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\pwm.o: .\User\Store.h

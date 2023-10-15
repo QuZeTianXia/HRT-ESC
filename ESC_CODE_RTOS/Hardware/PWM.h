@@ -14,5 +14,4 @@ void Back_Pressure_Down_Quick(void);
 void Front_Pressure_Down_Quick(void);
 void Back_Release(void);
 void Front_Release(void);
-void Front_Finish(void);
 #endif

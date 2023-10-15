@@ -172,6 +172,7 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 		 }
 	 }
 	 
+	 //From:ECU//content:ECU×´Ì¬
 	 else if(RxMessage.StdId==0x156&&RxMessage.IDE==0)//ECU×´Ì¬
 	 {
 		 Old_ECU_State = ECU_State;
@@ -179,6 +180,21 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 		 if(Old_ECU_State != ECU_State)  ECU_State_Switch_Flag = 1;
 
 	 }
+	 
+	  //From:USER//content:¸üÐÂÅäÖÃ
+	 else if(RxMessage.StdId==0x317&&RxMessage.IDE==0)
+	 {
+		 if(RxMessage.Data[0] == 0xAA)
+		 {
+			 Quick_Accelerate = RxMessage.Data[1];
+		 }
+		 if(RxMessage.Data[0] == 0xBB)
+		 {
+			 Slow_Accelerate = RxMessage.Data[1];
+		 }
+		 Store_Save();
+	 }
+	 
 	 
 	  
 	 

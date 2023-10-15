@@ -224,9 +224,9 @@ void Back_Pressure_Up_Slow(void)
 	Set_RBO_PWM(0)
 	Set_RBI_PWM(0)
 	
-	Set_LSTB1_PWM(150)
-	Set_LTC_PWM(150)
-	Set_PUMP_PWM(50)	
+	Set_RFI_PWM(150)//-//RTC*********
+	Set_RSTB2_PWM(150)//-*如开//RSTB*******
+	Set_PUMP_PWM(Slow_Accelerate)	
 }
 
 void Front_Pressure_Up_Slow(void)
@@ -237,54 +237,51 @@ void Front_Pressure_Up_Slow(void)
 	Set_LFO_PWM(0)
 	Set_RFO_PWM(0)
 	Set_RFI_PWM(0)
-//	
-//	Set_RSTB1_PWM(150)
-//	Set_RTC_PWM(150)
-			Set_LSTB2_PWM(150)//--//LSTB1******
-		Set_LFI_PWM(125)//-//LTC*******	
-	Set_PUMP_PWM(25)	
+
+	Set_LSTB2_PWM(150)//--//LSTB1******
+	Set_LFI_PWM(125)//-//LTC*******	
+	Set_PUMP_PWM(Slow_Accelerate)	
 }
 
 void Back_Pressure_Up_Quick(void)
 {
-//	Back_State = Quick_UP;
 
-//	Set_LBI_PWM(0)
-//	Set_LBO_PWM(0)
+
+	Set_LBI_PWM(0)
+	Set_LBO_PWM(0)
 	Set_RBO_PWM(0)
 	Set_RBI_PWM(0)
 	
-	Set_LSTB1_PWM(200)
-	Set_LTC_PWM(200)
-	Set_PUMP_PWM(150)	
+	Set_RFI_PWM(150)//-//RTC*********
+	Set_RSTB2_PWM(150)//-*如开//RSTB*******
+	Set_PUMP_PWM(Quick_Accelerate)	
 }
 
   void Front_Pressure_Up_Quick(void)
 {
-//	Front_State = Quick_UP;
+
 	
 	Set_LFI_PWM(0)
 	Set_LFO_PWM(0)
 	Set_RFO_PWM(0)
 	Set_RFI_PWM(0)
 
-//	Set_RSTB1_PWM(200)
-//	Set_RTC_PWM(200)
-			Set_LSTB2_PWM(150)//--//LSTB1******
-		Set_LFI_PWM(125)//-//LTC*******	
-	Set_PUMP_PWM(50)	
+
+	Set_LSTB2_PWM(150)//--//LSTB1******
+	Set_LFI_PWM(125)//-//LTC*******	
+	Set_PUMP_PWM(Quick_Accelerate)	
 }
 
 
 void Front_Pressure_Down_Quick(void)
 {
-//	Front_State = Quick_DOWN;
+
 	
 	Set_RSTB1_PWM(0)
 	Set_RTC_PWM(0)
-				Set_LSTB2_PWM(0)//--//LSTB1******
-		Set_LFI_PWM(0)//-//LTC*******	
-		Set_PUMP_PWM(0)
+	Set_LSTB2_PWM(0)//--//LSTB1******
+	Set_LFI_PWM(0)//-//LTC*******	
+	Set_PUMP_PWM(0)
 //				Set_LTC_PWM(150)//-//LFI
 //		Set_LBO_PWM(150)//--LFO
 	
@@ -304,11 +301,15 @@ void Back_Pressure_Down_Quick(void)
 	Set_LSTB1_PWM(0)
 	Set_LTC_PWM(0)
 	
-	Set_LBI_PWM(100)
-	Set_LBO_PWM(100)
+	Set_LBI_PWM(0)
+	Set_LBO_PWM(0)
+	
+	Set_RFI_PWM(0)//-//RTC*********
+	Set_RSTB2_PWM(0)//-*如开//RSTB*******
+	
 //	Set_RBO_PWM(100)
 //	Set_RBI_PWM(100)
-	Set_PUMP_PWM(150)
+	Set_PUMP_PWM(0)
 }
 
 void Front_Pressure_Down_Slow(void)
@@ -317,9 +318,10 @@ void Front_Pressure_Down_Slow(void)
 	
 	Set_RSTB1_PWM(0)
 	Set_RTC_PWM(0)
-					Set_LSTB2_PWM(0)//--//LSTB1******
-		Set_LFI_PWM(0)//-//LTC*******	
-		Set_PUMP_PWM(0)
+	Set_LSTB2_PWM(0)//--//LSTB1******
+	Set_LFI_PWM(0)//-//LTC*******	
+	Set_PUMP_PWM(0)
+	
 //				Set_LTC_PWM(150)//-//LFI
 //		Set_LBO_PWM(150)//--LFO
 	
@@ -333,16 +335,15 @@ void Front_Pressure_Down_Slow(void)
 
 void Back_Pressure_Down_Slow(void)
 {
-//	Back_State = Slow_DOWN;
-
-	Set_LSTB1_PWM(0)
-	Set_LTC_PWM(0)
+	Set_LBI_PWM(0)
+	Set_LBO_PWM(0)
+	Set_RBO_PWM(0)
+	Set_RBI_PWM(0)
+	Set_PUMP_PWM(0)
 	
-	Set_LBI_PWM(150)
-	Set_LBO_PWM(150)
-	Set_RBO_PWM(150)
-	Set_RBI_PWM(150)
-	Set_PUMP_PWM(50)
+	Set_RFI_PWM(0)//-//RTC*********
+	Set_RSTB2_PWM(0)//-*如开//RSTB*******
+	Set_PUMP_PWM(0)
 }
 
 
@@ -360,59 +361,31 @@ void Front_Release(void)
 //	Set_RFO_PWM(0)
 //	Set_RFI_PWM(0)
 //	Set_PUMP_PWM(0)
-			Set_LSTB2_PWM(0)//--//LSTB1******
-		Set_LFI_PWM(0)//-//LTC*******
+	Set_LSTB2_PWM(0)//--//LSTB1******
+	Set_LFI_PWM(0)//-//LTC*******
 //			Set_LTC_PWM(150)//-//LFI
 //		Set_LBO_PWM(150)//--LFO	
 	Set_PUMP_PWM(0)
-//	ESC_Release();
+
 }
 
 void Back_Release(void)
 {
-//	Back_State = Release;
+	Set_RFI_PWM(0)//-//RTC*********
+	Set_RSTB2_PWM(0)//-*如开//RSTB*******
 	
-	Set_LSTB1_PWM(0)
-	Set_LTC_PWM(0)
-
 	Set_LBI_PWM(0)
 	Set_LBO_PWM(0)
 	Set_RBO_PWM(0)
 	Set_RBI_PWM(0)
+	
 	Set_PUMP_PWM(0)
 }
 
 void ESC_Release(void)
-{	
-//	Back_State = Release;
-//	Front_State = Release;
-	
-//	Set_LSTB1_PWM(0)
-//	Set_LTC_PWM(0)
-//	Set_RSTB1_PWM(0)
-//	Set_RTC_PWM(0)
-//	
-//	Set_LFI_PWM(0)
-//	Set_LFO_PWM(0)
-//	Set_RFO_PWM(0)
-//	Set_RFI_PWM(0)
-//	
-//	Set_LBI_PWM(0)
-//	Set_LBO_PWM(0)
-//	Set_RBO_PWM(0)
-//	Set_RBI_PWM(0)
-//	
-//	Set_PUMP_PWM(0)	
-	
+{		
 	Front_Release();
 	Back_Release();
-}
-
-void Front_Finish(void)
-{
-			Set_LSTB2_PWM(150)//--//LSTB1******
-		Set_LFI_PWM(125)//-//LTC*******	
-	Set_PUMP_PWM(100)
 }
 
 

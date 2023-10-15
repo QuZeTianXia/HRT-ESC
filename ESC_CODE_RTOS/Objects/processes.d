@@ -48,3 +48,4 @@
 .\objects\processes.o: .\Hardware\CAN.h
 .\objects\processes.o: .\Hardware\oled.h
 .\objects\processes.o: D:\EnglishDownload\keil-v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\processes.o: .\User\Store.h
