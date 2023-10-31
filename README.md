@@ -1,5 +1,7 @@
 # 更新日志      
-[![O1jPRb.png](https://ooo.0x0.ooo/2023/10/13/O1jPRb.png)](https://img.tg/image/O1jPRb)  
+[![O1jPRb.png](https://ooo.0x0.ooo/2023/10/13/O1jPRb.png)](https://img.tg/image/O1jPRb)   
++2023/10/31/20:21   
+赛前能用的四轮加压版本，但后轮还是会跳动，而且加压速率较慢。 
 + 2023/10/15/9:35  
 梳理了逻辑，增加了使用CAN改变加压力度配制参数的功能。  
 	+ Data[0] = 0xAA ---> Data[1] = Quick_Accelerate;  
