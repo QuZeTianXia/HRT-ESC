@@ -1,0 +1,6 @@
+Added Component: Designator=U1(POWERSO-20_L15.9-W11.0-P1.27-LS14.2-BL-EP)
+Added Component: Designator=U2(POWERSO-20_L15.9-W11.0-P1.27-LS14.2-BL-EP)
+Added Component: Designator=U3(POWERSO-20_L15.9-W11.0-P1.27-LS14.2-BL-EP)
+Added Component: Designator=U4(POWERSO-20_L15.9-W11.0-P1.27-LS14.2-BL-EP)
+Added Class: Name=23D_ESC_DRIVER
+Added Room: Name=23D_ESC_DRIVER

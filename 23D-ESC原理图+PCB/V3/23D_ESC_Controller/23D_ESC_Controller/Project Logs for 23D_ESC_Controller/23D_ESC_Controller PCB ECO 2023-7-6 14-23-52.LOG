@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=LED1 Pin=U1-80
+Added Pin To Net: NetName=DR2_STA Pin=U1-81
+Added Pin To Net: NetName=DR1_STA Pin=U1-84
+Added Pin To Net: NetName=DR4_STA Pin=U1-86
+Added Pin To Net: NetName=DR3_STA Pin=U1-89
+Added Room: Name=23D_ESC_Controller

@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=RBI_PWM Pin=2-7
+Removed Pin From Net: NetName=RBI_STA Pin=2-8
+Removed Pin From Net: NetName=RBI_OUT Pin=2-9
+Removed Pin From Net: NetName=RSTB1_PWM Pin=3-7
+Removed Pin From Net: NetName=RSTB1_STA Pin=3-8
+Removed Pin From Net: NetName=RSTB1_OUT Pin=3-9
+Removed Pin From Net: NetName=RBI_OUT Pin=D16-1
+Removed Pin From Net: NetName=RSTB1_OUT Pin=D21-1
+Added Pin To Net: NetName=RSTB1_PWM Pin=2-7
+Added Pin To Net: NetName=RSTB1_STA Pin=2-8
+Added Pin To Net: NetName=RSTB1_OUT Pin=2-9
+Added Pin To Net: NetName=RBI_PWM Pin=3-7
+Added Pin To Net: NetName=RBI_STA Pin=3-8
+Added Pin To Net: NetName=RBI_OUT Pin=3-9
+Added Pin To Net: NetName=RSTB1_OUT Pin=D16-1
+Added Pin To Net: NetName=RBI_OUT Pin=D21-1
+Added Room: Name=23D_ESC_DRIVER

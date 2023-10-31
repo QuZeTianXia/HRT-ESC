@@ -1,0 +1,5 @@
+Added Component: Designator=C30(C 0805)
+Added Pin To Net: NetName=P_GND Pin=C30-1
+Added Pin To Net: NetName=RB_OUP Pin=C30-2
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C30 10uF
+Added Room: Name=HRT_D ER100 V1.0

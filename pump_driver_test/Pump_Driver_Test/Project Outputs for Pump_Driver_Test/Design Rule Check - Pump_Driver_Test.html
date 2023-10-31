@@ -1,0 +1,395 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\%E8%BD%AF%E4%BB%B6\AD16save\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2023/8/5</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:45:59</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc" class="file"><acronym title="D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc">D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">21</td></tr>
+</table>
+</td>
+</table><a name="IDMWC11NM43D5OBE2YYAEZ0MDNTHLU4AEPHDC4MVKCUDV5NY4W1D1F"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1GYY0TVQAZPTDK1QOX2QMGOOEIBNZYX4KZVWEZQE5DZ0DIG0EWG">Clearance Constraint (Gap=25mil) (InPoly),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSGWSV0E5GULMIZSSG100HSUVEJN3QHRRQCTW1GH4WU1NZYUILEEG">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUSYCUJ1LCICMMAOOUWGK1BEVFKFTE0QKCTA1LWJDA0JRH2FBCU5E">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNQ4TK5S4AUGFGVVAGUCPV5WXSPJ4V4ISBYUO5EKXP2HC2FRL2CJ">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJATRUF3QEHTPG11MBDC14H0Q1ILOV5X2UZWJC5GSX0OVAHEU1UMN">Silk To Solder Mask (Clearance=1mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5TJ2DRLRZFZXKGF5FW1KUR5E0ENFQX3WHUESLDHMDIP2SQMPGO2M">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDICCKAD5WS2NRCBPG2MLI34RS1FFAPW1LXLNQXJECXKBWGRFKW1BG">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2FPSTF1ZX1EGHH4DMAAETG5W2ITAQMBNQ1RHGSKJP0QEUNTPQ3LI">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDAIYXRRX1EQ4CQC1BQVWXTNZ3FTZ2NE1V3ZA3UPURJBS3MJGOO3P">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3QLGBNN5HWWQBIM2HMVHE5LJ1DCALA45BQC5GJBNJ4NABM3H3IEJ">Width Constraint (Min=10mil) (Max=100mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYHOZFUN3Q0WXKES3G23VE1XSCFEDBPSVFKXRIXNW2N4YRUO3Z1RP">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=20mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4010MHK1V4ISPFBKU23D0MJB2NMEV205ITIMADGKGSLFPCFZZQZB">Clearance Constraint (Gap=7mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDENDHGV3JQGAAJF341OEYKWDSALHHVMSKA5EVYSEN0ZB33VQAUJGJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDDPY1PLBNUUACJZR2WLUKFYPBIURS3QYHG3YI3GIM31XJIPB0WC">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">21</td>
+</tr>
+</table><br><a name="ID5TJ2DRLRZFZXKGF5FW1KUR5E0ENFQX3WHUESLDHMDIP2SQMPGO2M"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5186.47mil|Location2.X=5197.72mil|Location1.Y=3257.8mil|Location2.Y=3269.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5186.47mil|Location2.X=5197.72mil|Location1.Y=3257.8mil|Location2.Y=3269.05mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.801mil &lt; 10mil) Between Arc (5262.5mil,3042.5mil) on Top Solder And Arc (5177.5mil,3137.5mil) on Top Solder [Top Solder] Mask Sliver [3.801mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5184.731mil|Location2.X=5195.981mil|Location1.Y=3259.215mil|Location2.Y=3270.465mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5184.731mil|Location2.X=5195.981mil|Location1.Y=3259.215mil|Location2.Y=3270.465mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.344mil &lt; 10mil) Between Arc (5200mil,3125mil) on Top Solder And Arc (5177.5mil,3137.5mil) on Top Solder [Top Solder] Mask Sliver [0.344mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5187.633mil|Location2.X=5198.883mil|Location1.Y=3255.802mil|Location2.Y=3267.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5187.633mil|Location2.X=5198.883mil|Location1.Y=3255.802mil|Location2.Y=3267.052mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.343mil &lt; 10mil) Between Arc (5285mil,3020mil) on Top Solder And Arc (5177.5mil,3137.5mil) on Top Solder [Top Solder] Mask Sliver [8.343mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5116.359mil|Location2.X=5127.609mil|Location1.Y=3233.477mil|Location2.Y=3244.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5116.359mil|Location2.X=5127.609mil|Location1.Y=3233.477mil|Location2.Y=3244.727mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.169mil &lt; 10mil) Between Arc (5205mil,3105mil) on Top Solder And Arc (5172.5mil,3157.5mil) on Top Solder [Top Solder] Mask Sliver [5.169mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5166.875mil|Location2.X=5178.125mil|Location1.Y=3249.819mil|Location2.Y=3261.069mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5166.875mil|Location2.X=5178.125mil|Location1.Y=3249.819mil|Location2.Y=3261.069mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.112mil &lt; 10mil) Between Area Fill (5025mil,3260mil) (5820mil,3460mil) on Top Solder And Arc (5172.5mil,3157.5mil) on Top Solder [Top Solder] Mask Sliver [9.112mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.818mil|Location2.X=5077.068mil|Location1.Y=3178.709mil|Location2.Y=3189.959mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.818mil|Location2.X=5077.068mil|Location1.Y=3178.709mil|Location2.Y=3189.959mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.178mil &lt; 10mil) Between Area Fill (5025mil,3185mil) (5070mil,3220mil) on Top Solder And Arc (5200mil,3125mil) on Top Solder [Top Solder] Mask Sliver [3.178mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5044.385mil|Location2.X=5055.635mil|Location1.Y=3092.705mil|Location2.Y=3103.955mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5044.385mil|Location2.X=5055.635mil|Location1.Y=3092.705mil|Location2.Y=3103.955mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.563mil &lt; 10mil) Between Arc (5292.5mil,3017.5mil) on Top Solder And Arc (5220mil,3095mil) on Top Solder [Top Solder] Mask Sliver [0.563mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5210.793mil|Location2.X=5222.043mil|Location1.Y=3259.311mil|Location2.Y=3270.561mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5210.793mil|Location2.X=5222.043mil|Location1.Y=3259.311mil|Location2.Y=3270.561mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.517mil &lt; 10mil) Between Arc (5285mil,3020mil) on Top Solder And Arc (5205mil,3105mil) on Top Solder [Top Solder] Mask Sliver [0.517mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5211.4mil|Location2.X=5222.65mil|Location1.Y=3257.778mil|Location2.Y=3269.028mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5211.4mil|Location2.X=5222.65mil|Location1.Y=3257.778mil|Location2.Y=3269.028mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.801mil &lt; 10mil) Between Arc (5292.5mil,3017.5mil) on Top Solder And Arc (5205mil,3105mil) on Top Solder [Top Solder] Mask Sliver [3.801mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.206mil|Location2.X=5079.456mil|Location1.Y=3176.539mil|Location2.Y=3187.789mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5068.206mil|Location2.X=5079.456mil|Location1.Y=3176.539mil|Location2.Y=3187.789mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.532mil &lt; 10mil) Between Area Fill (5025mil,3185mil) (5070mil,3220mil) on Top Solder And Arc (5262.5mil,3042.5mil) on Top Solder [Top Solder] Mask Sliver [9.532mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4820.739mil|Location2.X=4831.989mil|Location1.Y=2586.041mil|Location2.Y=2597.291mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4820.739mil|Location2.X=4831.989mil|Location1.Y=2586.041mil|Location2.Y=2597.291mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.186mil &lt; 10mil) Between Arc (4770mil,2695mil) on Top Solder And Arc (4832.5mil,2647.5mil) on Top Solder [Top Solder] Mask Sliver [5.186mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4796.434mil|Location2.X=4807.684mil|Location1.Y=2585.61mil|Location2.Y=2596.86mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4796.434mil|Location2.X=4807.684mil|Location1.Y=2585.61mil|Location2.Y=2596.86mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.789mil &lt; 10mil) Between Arc (4742.5mil,2717.5mil) on Top Solder And Arc (4805mil,2665mil) on Top Solder [Top Solder] Mask Sliver [3.789mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4862.251mil|Location2.X=4873.501mil|Location1.Y=2648.004mil|Location2.Y=2659.254mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4862.251mil|Location2.X=4873.501mil|Location1.Y=2648.004mil|Location2.Y=2659.254mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.991mil &lt; 10mil) Between Arc (4742.5mil,2717.5mil) on Top Solder And Arc (4812.5mil,2642.5mil) on Top Solder [Top Solder] Mask Sliver [5.991mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4860.497mil|Location2.X=4871.747mil|Location1.Y=2683.58mil|Location2.Y=2694.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4860.497mil|Location2.X=4871.747mil|Location1.Y=2683.58mil|Location2.Y=2694.83mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.647mil &lt; 10mil) Between Arc (4685mil,2775mil) on Top Solder And Arc (4790mil,2670mil) on Top Solder [Top Solder] Mask Sliver [9.647mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.048mil|Location2.X=4874.298mil|Location1.Y=2682.363mil|Location2.Y=2693.613mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.048mil|Location2.X=4874.298mil|Location1.Y=2682.363mil|Location2.Y=2693.613mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.993mil &lt; 10mil) Between Arc (4695mil,2770mil) on Top Solder And Arc (4790mil,2670mil) on Top Solder [Top Solder] Mask Sliver [3.993mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4865.819mil|Location2.X=4877.069mil|Location1.Y=2697.666mil|Location2.Y=2708.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4865.819mil|Location2.X=4877.069mil|Location1.Y=2697.666mil|Location2.Y=2708.916mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.335mil &lt; 10mil) Between Arc (4685mil,2775mil) on Top Solder And Arc (4770mil,2695mil) on Top Solder [Top Solder] Mask Sliver [8.335mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4868.421mil|Location2.X=4879.671mil|Location1.Y=2696.628mil|Location2.Y=2707.878mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4868.421mil|Location2.X=4879.671mil|Location1.Y=2696.628mil|Location2.Y=2707.878mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.733mil &lt; 10mil) Between Arc (4695mil,2770mil) on Top Solder And Arc (4770mil,2695mil) on Top Solder [Top Solder] Mask Sliver [2.733mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4868.592mil|Location2.X=4879.842mil|Location1.Y=2716.006mil|Location2.Y=2727.256mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4868.592mil|Location2.X=4879.842mil|Location1.Y=2716.006mil|Location2.Y=2727.256mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.017mil &lt; 10mil) Between Arc (4685mil,2775mil) on Top Solder And Arc (4755mil,2710mil) on Top Solder [Top Solder] Mask Sliver [2.017mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4865.773mil|Location2.X=4877.023mil|Location1.Y=2717.44mil|Location2.Y=2728.69mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4865.773mil|Location2.X=4877.023mil|Location1.Y=2717.44mil|Location2.Y=2728.69mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.263mil &lt; 10mil) Between Arc (4662.5mil,2797.5mil) on Top Solder And Arc (4755mil,2710mil) on Top Solder [Top Solder] Mask Sliver [8.263mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.746mil|Location2.X=4874.996mil|Location1.Y=2721.295mil|Location2.Y=2732.545mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.746mil|Location2.X=4874.996mil|Location1.Y=2721.295mil|Location2.Y=2732.545mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.895mil &lt; 10mil) Between Arc (4662.5mil,2797.5mil) on Top Solder And Arc (4742.5mil,2717.5mil) on Top Solder [Top Solder] Mask Sliver [1.895mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2769.375mil|Location2.X=2780.625mil|Location1.Y=3669.375mil|Location2.Y=3680.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2769.375mil|Location2.X=2780.625mil|Location1.Y=3669.375mil|Location2.Y=3680.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 10mil) Between Via (2775mil,3695mil) from Top Layer to Bottom Layer And Pad C6-2(2775mil,3645mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

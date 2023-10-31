@@ -1,0 +1,11 @@
+Output: Simple BOM
+Type  : SimpleBOM
+From  : Variant [[No Variations]] of Project [23D_ESC_Driver_Corrected.PrjPcb]
+   Generated File[23D_ESC_DRIVER.BOM]
+   Generated File[23D_ESC_DRIVER.CSV]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 14:09:01 On 2023/9/10

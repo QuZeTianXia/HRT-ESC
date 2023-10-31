@@ -1,0 +1,4 @@
+Added Component: Designator=*(POWERSO-20_L15.9-W11.0-P1.27-LS14.2-BL-EP)
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component * POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R8 10R
+Added Room: Name=23D_ESC_DRIVER

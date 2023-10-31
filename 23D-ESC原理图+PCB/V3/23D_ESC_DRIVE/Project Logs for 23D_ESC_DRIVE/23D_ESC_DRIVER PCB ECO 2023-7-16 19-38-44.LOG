@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=RFO_STA Pin=J6-7
+Removed Pin From Net: NetName=RFI_STA Pin=J6-8
+Removed Pin From Net: NetName=RBI_STA Pin=J6-9
+Removed Pin From Net: NetName=RBO_STA Pin=J6-10
+Removed Pin From Net: NetName=LFI_STA Pin=J6-11
+Removed Pin From Net: NetName=LFO_STA Pin=J6-12
+Removed Pin From Net: NetName=LBO_STA Pin=J6-14
+Added Pin To Net: NetName=LFO_STA Pin=J6-7
+Added Pin To Net: NetName=LTC_STA Pin=J6-8
+Added Pin To Net: NetName=LFI_STA Pin=J6-9
+Added Pin To Net: NetName=RBI_STA Pin=J6-10
+Added Pin To Net: NetName=RFO_STA Pin=J6-11
+Added Pin To Net: NetName=RTC_STA Pin=J6-12
+Added Pin To Net: NetName=RFI_STA Pin=J6-14
+Added Room: Name=23D_ESC_DRIVER

@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND_D Pin=J1-1
+Added Pin To Net: NetName=GND_D Pin=J1-2
+Added Pin To Net: NetName=VCC_14V Pin=J1-3
+Added Pin To Net: NetName=VCC_14V Pin=J1-4
+Added Room: Name=23D_ESC_Controller

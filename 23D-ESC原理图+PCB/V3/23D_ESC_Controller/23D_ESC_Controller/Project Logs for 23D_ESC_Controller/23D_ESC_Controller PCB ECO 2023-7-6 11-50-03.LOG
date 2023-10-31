@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=USART1_TX Pin=*-2
+Removed Pin From Net: NetName=USART1_RX Pin=*-3
+Added Pin To Net: NetName=USART2_RX Pin=*-3
+Added Net: Name=USART2_RX
+Added Pin To Net: NetName=USART4_RX Pin=U1-79
+Added Net: Name=USART4_RX
+Added Pin To Net: NetName=USART4_TX Pin=*-2
+Added Pin To Net: NetName=USART4_TX Pin=U1-78
+Added Net: Name=USART4_TX
+Added Room: Name=23D_ESC_Controller

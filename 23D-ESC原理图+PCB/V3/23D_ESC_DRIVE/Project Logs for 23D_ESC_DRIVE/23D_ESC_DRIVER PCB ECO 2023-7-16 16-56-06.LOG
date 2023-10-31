@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=RBO_OUT Pin=2-12
+Removed Pin From Net: NetName=RBO_STA Pin=2-13
+Removed Pin From Net: NetName=RBO_PWM Pin=2-14
+Removed Pin From Net: NetName=RBO_OUT Pin=D17-1
+Removed Pin From Net: NetName=VALVES+ Pin=D17-2
+Change Component Designator: OldDesignator=D18 NewDesignator=D17
+Change Component Designator: OldDesignator=D19 NewDesignator=D18
+Change Component Designator: OldDesignator=D20 NewDesignator=D19
+Change Component Designator: OldDesignator=D21 NewDesignator=D20
+Change Component Designator: OldDesignator=D22 NewDesignator=D21
+Change Component Designator: OldDesignator=D23 NewDesignator=D22
+Change Component Designator: OldDesignator=D24 NewDesignator=D23
+Change Component Designator: OldDesignator=D25 NewDesignator=D24
+Added Component: Designator=D25(DO-214)
+Added Pin To Net: NetName=RBO_OUT Pin=4-12
+Added Pin To Net: NetName=RBO_STA Pin=4-13
+Added Pin To Net: NetName=RBO_PWM Pin=4-14
+Added Pin To Net: NetName=RBO_OUT Pin=D25-1
+Added Pin To Net: NetName=VALVES+ Pin=D25-2
+Added Room: Name=23D_ESC_DRIVER

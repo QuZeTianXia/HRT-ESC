@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=CAN_IN_L Pin=P1-6
+Removed Pin From Net: NetName=CAN_IN_L Pin=P1-6
+Removed Pin From Net: NetName=CAN_H Pin=P1-11
+Added Pin To Net: NetName=CAN_H Pin=P1-6
+Added Pin To Net: NetName=CAN_H Pin=P1-6
+Added Pin To Net: NetName=CAN_IN_L Pin=P1-11
+Added Room: Name=Controller

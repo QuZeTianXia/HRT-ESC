@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [ESC_control.PrjPCB]
+   Generated File[Pick Place for ESC_con.txt]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 18:59:45 On 2023/2/20

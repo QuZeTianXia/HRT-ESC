@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=U5 NewDesignator=U6
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component U6 MX34_28
+Added Room: Name=HRT_D ER100 V1.0

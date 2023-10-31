@@ -1,0 +1,72 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+D20        DO-214            3979.521mil       1430mil       3980mil       1430mil    3888.97mil       1430mil  T        360.00 120T3G         
+D19        DO-214            4094.521mil       1810mil       4095mil       1810mil    4003.97mil       1810mil  T        360.00 120T3G         
+D18        DO-214            3858.386mil    893.348mil   3858.386mil    893.827mil   3858.386mil    802.797mil  T         90.00 120T3G         
+D17        DO-214            3858.386mil    591.652mil   3858.386mil    591.173mil   3858.386mil    682.203mil  T        270.00 120T3G         
+D16        DO-214            2549.521mil       1750mil       2550mil       1750mil    2458.97mil       1750mil  T        360.00 120T3G         
+D15        DO-214            2549.521mil   2079.228mil       2550mil   2079.228mil    2458.97mil   2079.228mil  T        360.00 120T3G         
+D14        DO-214            1999.521mil        360mil       2000mil        360mil    1908.97mil        360mil  T        360.00 120T3G         
+C37        C_0805                3930mil       1610mil       3930mil       1610mil       3975mil       1610mil  T        180.00 2.2uF          
+C36        C_0805             4048.97mil   1959.337mil    4048.97mil   1959.337mil    4093.97mil   1959.337mil  T        180.00 2.2uF          
+C35        C_0805                3720mil    848.827mil       3720mil    848.827mil       3720mil    803.827mil  T         90.00 2.2uF          
+C34        C_0805                3720mil    641.851mil       3720mil    641.851mil       3720mil    596.851mil  T         90.00 2.2uF          
+C33        C_0805                2490mil   1864.961mil       2490mil   1864.961mil       2445mil   1864.961mil  T        360.00 2.2uF          
+C32        C_0805                2490mil   1965.072mil       2490mil   1965.072mil       2445mil   1965.072mil  T        360.00 2.2uF          
+C31        C_0805                1950mil        520mil       1950mil        520mil       1995mil        520mil  T        180.00 2.2uF          
+C28        C_0805                2400mil       2240mil       2400mil       2240mil    2368.18mil    2271.82mil  T        315.00 2.2uF          
+C27        C_0805            1643.228mil        120mil   1643.228mil        120mil   1688.228mil        120mil  T        180.00 2.2uF          
+C26        C_0805            3513.386mil     270.63mil   3513.386mil     270.63mil   3468.386mil     270.63mil  T        360.00 2.2uF          
+C25        C_0805                3610mil       1140mil       3610mil       1140mil       3610mil       1185mil  T        270.00 2.2uF          
+C24        C_0805            1296.772mil        120mil   1296.772mil        120mil   1341.772mil        120mil  T        180.00 2.2uF          
+C30        C_0805                2315mil       1510mil       2315mil       1510mil       2270mil       1510mil  T        360.00 2.2uF          
+C1         C_0805                 660mil       2310mil        660mil       2310mil        660mil       2355mil  T        270.00 50V 104        
+C2         C_0805                 760mil       2310mil        760mil       2310mil        760mil       2355mil  T        270.00 10uF           
+C3         C_0805                1725mil   2315.003mil       1725mil   2315.003mil       1770mil   2315.003mil  T        180.00 10uF           
+C4         C_0805                2960mil   1728.071mil       2960mil   1728.071mil       3005mil   1728.071mil  T        180.00 10uF           
+C5         C_0805                2615mil        650mil       2615mil        650mil       2615mil        695mil  T        270.00 10uF           
+C6         C_0805                1060mil        905mil       1060mil        905mil       1060mil        950mil  T        270.00 10uF           
+C7         C_0805                2240mil       2975mil       2240mil       2975mil       2240mil       3020mil  T        270.00 50V 10uF       
+C8         CP_3528B          2089.997mil   2810.003mil       2090mil       2810mil   2089.997mil   2739.137mil  T         90.00 25V 10uF       
+C9         C_0805                3090mil        290mil       3090mil        290mil       3135mil        290mil  T        180.00 104            
+D1         LED_0805                80mil       1930mil         80mil       1930mil         80mil       1980mil  B        270.00 Orange         
+D2         TO252_DIO          842.291mil   2720.551mil        820mil       2720mil    700.228mil   2809.551mil  T        270.00 V40PWM45C      
+D3         DO-214AA               200mil       2720mil        200mil       2720mil        200mil   2637.323mil  T         90.00 P6SMB18        
+D4         LED_0805                80mil       1220mil         80mil       1220mil         80mil       1270mil  B        270.00 Blue           
+D5         LL34                   590mil       1980mil        590mil       1980mil    516.968mil       1980mil  T        360.00 18V            
+D6         DO-214AC          1829.521mil       3020mil       1830mil       3020mil    1738.97mil       3020mil  T        360.00 ES1B-E3/61T    
+J3         SMT_Connector          450mil        180mil        450mil        180mil        450mil        180mil  B        180.00 SMT_Connector  
+J4         SMT_Connector          200mil        180mil        200mil        180mil        200mil        180mil  B        180.00 SMT_Connector  
+J5         B2B_1.27_Female        590mil     1582.5mil        590mil       1870mil        660mil       1358mil  B        360.00 20P_Female     
+J6         B2B_1.27_Female     2412.5mil        220mil       2700mil        220mil       2188mil        150mil  B        270.00 20P_Female     
+J7         B2B_1.27_Female       4280mil      617.5mil       4280mil        330mil       4210mil        842mil  B        180.00 20P_Female     
+L1         L_0805                1500mil       1860mil       1500mil       1860mil       1545mil       1860mil  T        180.00 Inductor       
+L2         L_0805                2960mil       1870mil       2960mil       1870mil       3005mil       1870mil  T        180.00 Inductor       
+L3         L_1812                 410mil       2480mil        410mil       2480mil        315mil       2480mil  T        360.00 100uH          
+L4         L_0805                1880mil    783.976mil       1880mil    783.976mil       1880mil    828.976mil  T        270.00 Inductor       
+L5         L_0805                2615mil        790mil       2615mil        790mil       2660mil        790mil  T        180.00 Inductor       
+R1         R_0603             479.997mil   1980.003mil        480mil       1980mil    516.497mil   1980.003mil  B        180.00 10K            
+R2         R_0603             200.003mil   1269.997mil        200mil       1270mil    163.503mil   1269.997mil  B        360.00 10K            
+R3         R_0603             170.003mil   2315.003mil        170mil       2315mil    133.503mil   2315.003mil  T          0.00 1K             
+R4         R_0805                 170mil       2215mil        170mil       2215mil        125mil       2215mil  T        360.00 6.8R@Ipeak=167mA
+R5         R_0805                 660mil       2125mil        660mil       2125mil        660mil       2170mil  T        270.00 330R           
+R6         R_0805                3295mil       2795mil       3295mil       2795mil       3295mil       2750mil  T         90.00 10R            
+R7         R_0603            1560.003mil   2920.003mil       1560mil       2920mil   1523.503mil   2920.003mil  T          0.00 1K             
+R8         R_0603            1560.003mil   2850.003mil       1560mil       2850mil   1523.503mil   2850.003mil  T          0.00 1K             
+R9         R_0805                4300mil       2790mil       4300mil       2790mil       4300mil       2745mil  T         90.00 10R            
+R10        R_0805                2900mil        190mil       2900mil        190mil       2945mil        190mil  T        180.00 10K            
+R11        R_0805                3090mil        190mil       3090mil        190mil       3045mil        190mil  T          0.00 2.2K           
+U1         SOP8                   420mil       2240mil        420mil       2240mil    316.654mil       2315mil  T          0.00 AUIR3241S      
+U2         PowerSO-36            1950mil       1920mil       1950mil       1920mil    2206.89mil    1702.48mil  T         90.00 L9348          
+U4         SOP8                  1820mil       2830mil       1820mil       2830mil   1716.653mil       2905mil  T          0.00 IR2184         
+U5         PowerSO-36            1470mil    686.851mil       1470mil    686.851mil    1252.48mil    429.961mil  T        360.00 L9348          
+U6         PowerSO-36            3090mil        720mil       3090mil        720mil    3346.89mil     502.48mil  T         90.00 L9348          
+VT2        TO263-3B              2860mil       2940mil       2860mil       2940mil   3085.394mil       2840mil  T         90.00 STB170NF04     
+VT3        TO263-3B              3900mil       2940mil       3900mil       2940mil   4125.394mil       2840mil  T         90.00 STB170NF04     
+J2         SMT_Connector          450mil       3020mil        450mil       3020mil        450mil       3020mil  B        180.00 SMT_Connector  
+J1         SMT_Connector          200mil       3020mil        200mil       3020mil        200mil       3020mil  B        180.00 SMT_Connector  
+VT1        TO252              989.449mil   2222.291mil        990mil       2200mil    900.449mil   2080.228mil  T        360.00 SQD40N06       
+U7         mx34_28           4815.276mil    735.039mil       4770mil    193.701mil   4632.205mil   1276.378mil  T        180.00 MX34_28        
+C29        C_0805                3905mil       2100mil       3905mil       2100mil       3905mil       2145mil  T        270.00 2.2uF          
+U3         PowerSO-36        3513.386mil       1785mil   3513.386mil       1785mil   3770.276mil    1567.48mil  T         90.00 L9348          
+

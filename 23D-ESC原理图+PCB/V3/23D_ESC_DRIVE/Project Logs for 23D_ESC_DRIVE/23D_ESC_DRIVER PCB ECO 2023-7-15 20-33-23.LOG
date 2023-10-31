@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=POWERGND Pin=CN1-1
+Removed Pin From Net: NetName=MOTOR+ Pin=CN1-4
+Added Pin To Net: NetName=MOTOR+ Pin=CN1-1
+Added Pin To Net: NetName=POWERGND Pin=CN1-4
+Added Room: Name=23D_ESC_DRIVER

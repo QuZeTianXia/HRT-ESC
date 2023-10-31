@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=RB_INP Pin=U5-20
+Added Pin To Net: NetName=RB_INP Pin=U5-12
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component U5 MX34_28
+Added Room: Name=HRT_D ER100 V1.0

@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=LED1 Pin=U1-25
+Removed Pin From Net: NetName=LFO_PWM Pin=U1-67
+Added Pin To Net: NetName=LFO_PWM Pin=U1-25
+Added Pin To Net: NetName=LED1 Pin=U1-80
+Added Room: Name=23D_ESC_Controller

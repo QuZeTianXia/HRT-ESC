@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=RFI_OUT Pin=1-2
+Removed Pin From Net: NetName=RFI_STA Pin=1-3
+Removed Pin From Net: NetName=RFI_PWM Pin=1-4
+Removed Pin From Net: NetName=RFO_OUT Pin=1-12
+Removed Pin From Net: NetName=RFO_STA Pin=1-13
+Removed Pin From Net: NetName=RFO_PWM Pin=1-14
+Removed Pin From Net: NetName=RFI_OUT Pin=D8-1
+Removed Pin From Net: NetName=RFO_OUT Pin=D12-1
+Added Pin To Net: NetName=RFO_OUT Pin=1-2
+Added Pin To Net: NetName=RFO_STA Pin=1-3
+Added Pin To Net: NetName=RFO_PWM Pin=1-4
+Added Pin To Net: NetName=RFI_OUT Pin=1-12
+Added Pin To Net: NetName=RFI_STA Pin=1-13
+Added Pin To Net: NetName=RFI_PWM Pin=1-14
+Added Pin To Net: NetName=RFO_OUT Pin=D8-1
+Added Pin To Net: NetName=RFI_OUT Pin=D12-1
+Added Room: Name=23D_ESC_DRIVER

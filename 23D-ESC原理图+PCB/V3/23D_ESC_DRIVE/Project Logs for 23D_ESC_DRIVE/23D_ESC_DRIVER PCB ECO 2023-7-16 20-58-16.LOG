@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=POWERGND Pin=C7-1
+Removed Pin From Net: NetName=VCC_14V Pin=C7-2
+Removed Member From Class: ClassName=23D_ESC_DRIVER Member=C7
+Added Room: Name=23D_ESC_DRIVER

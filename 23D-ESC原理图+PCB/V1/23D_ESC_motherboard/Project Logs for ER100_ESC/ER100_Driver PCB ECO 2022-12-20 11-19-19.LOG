@@ -1,0 +1,29 @@
+Added Component: Designator=U5(mx34_28)
+Added Pin To Net: NetName=VALVES+ Pin=U5-1
+Added Pin To Net: NetName=RB_OUP Pin=U5-2
+Added Pin To Net: NetName=L_STB2 Pin=U5-3
+Added Pin To Net: NetName=L_STB1 Pin=U5-4
+Added Pin To Net: NetName=P_GND Pin=U5-5
+Added Pin To Net: NetName=MOTOR+ Pin=U5-6
+Added Pin To Net: NetName=R_STB2 Pin=U5-7
+Added Pin To Net: NetName=R_STB1 Pin=U5-8
+Added Pin To Net: NetName=VALVES+ Pin=U5-9
+Added Pin To Net: NetName=LB_OUP Pin=U5-10
+Added Pin To Net: NetName=VALVES+ Pin=U5-11
+Added Pin To Net: NetName=RF_OUP Pin=U5-12
+Added Pin To Net: NetName=VALVES+ Pin=U5-13
+Added Pin To Net: NetName=R_TC Pin=U5-14
+Added Pin To Net: NetName=VALVES+ Pin=U5-15
+Added Pin To Net: NetName=RF_INP Pin=U5-16
+Added Pin To Net: NetName=VALVES+ Pin=U5-17
+Added Pin To Net: NetName=LB_INP Pin=U5-18
+Added Pin To Net: NetName=VALVES+ Pin=U5-19
+Added Pin To Net: NetName=RB_INP Pin=U5-20
+Added Pin To Net: NetName=LF_INP Pin=U5-21
+Added Pin To Net: NetName=VALVES+ Pin=U5-22
+Added Pin To Net: NetName=L_TC Pin=U5-23
+Added Pin To Net: NetName=VALVES+ Pin=U5-24
+Added Pin To Net: NetName=VALVES+ Pin=U5-25
+Added Pin To Net: NetName=LF_OUP Pin=U5-26
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component U5 MX34_28
+Added Room: Name=HRT_D ER100 V1.0

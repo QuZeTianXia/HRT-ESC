@@ -1,0 +1,24 @@
+Removed Member From Class: ClassName=23D_ESC_DRIVER Member=K?
+Added Component: Designator=C?(C 0805)
+Added Pin To Net: NetName=NetD?_1 Pin=D?-1
+Added Pin To Net: NetName=NetD?_1 Pin=R?-2
+Added Net: Name=NetD?_1
+Added Pin To Net: NetName=POWERGND Pin=D?-2
+Added Pin To Net: NetName=POWERGND Pin=D?-2
+Added Pin To Net: NetName=POWERGND Pin=J?-1
+Added Pin To Net: NetName=POWERGND Pin=J?-1
+Added Net: Name=POWERGND
+Added Pin To Net: NetName=VCC_14V Pin=D?-1
+Added Pin To Net: NetName=VCC_14V Pin=J?-1
+Added Pin To Net: NetName=VCC_14V Pin=J?-1
+Added Pin To Net: NetName=VCC_14V Pin=R?-1
+Added Net: Name=VCC_14V
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component * POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component * POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component * POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component C? Cap vol
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? P6SMB18
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Room: Name=23D_ESC_DRIVER

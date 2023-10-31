@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=USART1_TX Pin=3-1
+Removed Pin From Net: NetName=USART1_RX Pin=3-2
+Removed Pin From Net: NetName=GND_D Pin=U4-17
+Removed Member From Class: ClassName=23D_ESC_Controller Member=3
+Added Component: Designator=*(HDR2.54-M-LI-6P)
+Added Pin To Net: NetName=USART1_TX Pin=*-2
+Added Pin To Net: NetName=USART1_RX Pin=*-3
+Added Pin To Net: NetName=GND Pin=*-4
+Added Pin To Net: NetName=VCC_5V Pin=*-4
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * еед╦1*6
+Added Room: Name=23D_ESC_Controller

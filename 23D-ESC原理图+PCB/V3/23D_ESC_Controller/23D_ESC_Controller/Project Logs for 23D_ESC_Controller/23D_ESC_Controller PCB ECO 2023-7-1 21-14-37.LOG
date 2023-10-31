@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=GND_D Pin=3-1
+Removed Pin From Net: NetName=GND_D Pin=3-2
+Removed Pin From Net: NetName=GND_D Pin=3-3
+Removed Pin From Net: NetName=GND_D Pin=3-4
+Removed Pin From Net: NetName=GND_D Pin=3-5
+Removed Pin From Net: NetName=GND_D Pin=3-6
+Removed Pin From Net: NetName=GND_D Pin=3-7
+Removed Pin From Net: NetName=GND_D Pin=3-8
+Removed Member From Class: ClassName=23D_ESC_Controller Member=3
+Added Component: Designator=*(HDR2.54-M-LI-19P)
+Added Pin To Net: NetName=GND_D Pin=*-1
+Added Pin To Net: NetName=GND_D Pin=*-2
+Added Pin To Net: NetName=GND_D Pin=*-3
+Added Pin To Net: NetName=GND_D Pin=*-4
+Added Pin To Net: NetName=GND_D Pin=*-5
+Added Pin To Net: NetName=GND_D Pin=*-6
+Added Pin To Net: NetName=GND_D Pin=*-7
+Added Pin To Net: NetName=GND_D Pin=*-8
+Added Pin To Net: NetName=LBI Pin=1-4
+Added Pin To Net: NetName=LBO Pin=1-4
+Added Pin To Net: NetName=LFI Pin=1-4
+Added Pin To Net: NetName=LFO Pin=1-4
+Added Pin To Net: NetName=LSTB1 Pin=1-4
+Added Pin To Net: NetName=LSTB2 Pin=1-4
+Added Pin To Net: NetName=LTC Pin=1-4
+Added Pin To Net: NetName=RBI Pin=1-4
+Added Pin To Net: NetName=RBO Pin=1-4
+Added Pin To Net: NetName=RFI Pin=1-4
+Added Pin To Net: NetName=RFO Pin=1-4
+Added Pin To Net: NetName=L9349_ENABLE Pin=2-4
+Added Pin To Net: NetName=LBI_STA Pin=2-4
+Added Pin To Net: NetName=LBO_STA Pin=2-4
+Added Pin To Net: NetName=LFI_STA Pin=2-4
+Added Pin To Net: NetName=LFO_STA Pin=2-4
+Added Pin To Net: NetName=LSTB1_STA Pin=2-4
+Added Pin To Net: NetName=LSTB2_STA Pin=2-4
+Added Pin To Net: NetName=LTC_STA Pin=2-4
+Added Pin To Net: NetName=RBI_STA Pin=2-4
+Added Pin To Net: NetName=RBO_STA Pin=2-4
+Added Pin To Net: NetName=RFI_STA Pin=2-4
+Added Pin To Net: NetName=RFO_STA Pin=2-4
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * еед╦1*19
+Added Room: Name=23D_ESC_Controller

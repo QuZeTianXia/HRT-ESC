@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=LBO_PWM Pin=J5-6
+Added Pin To Net: NetName=RSTB2_PWM Pin=J5-6
+Added Room: Name=23D_ESC_DRIVER

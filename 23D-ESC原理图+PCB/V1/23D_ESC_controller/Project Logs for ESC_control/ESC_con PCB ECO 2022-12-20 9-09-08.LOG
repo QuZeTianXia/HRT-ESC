@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND_D Pin=P1-3
+Removed Pin From Net: NetName=GND_D Pin=P1-4
+Removed Pin From Net: NetName=SWCLK Pin=P1-9
+Removed Pin From Net: NetName=SWIO Pin=P1-10
+Added Pin To Net: NetName=SWIO Pin=P1-3
+Added Pin To Net: NetName=SWCLK Pin=P1-4
+Added Pin To Net: NetName=GND_D Pin=P1-9
+Added Pin To Net: NetName=GND_D Pin=P1-10
+Added Room: Name=Controller

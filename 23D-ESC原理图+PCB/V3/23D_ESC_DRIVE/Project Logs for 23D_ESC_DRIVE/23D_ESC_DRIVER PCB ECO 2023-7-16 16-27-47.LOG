@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=LSTB2_OUT Pin=4-12
+Removed Pin From Net: NetName=LSTB2_STA Pin=4-13
+Removed Pin From Net: NetName=LSTB2_PWM Pin=4-14
+Removed Pin From Net: NetName=LSTB2_OUT Pin=D25-1
+Removed Pin From Net: NetName=VALVES+ Pin=D25-2
+Change Component Designator: OldDesignator=D23 NewDesignator=D24
+Change Component Designator: OldDesignator=D24 NewDesignator=D25
+Added Component: Designator=D23(DO-214)
+Added Pin To Net: NetName=LSTB2_OUT Pin=4-2
+Added Pin To Net: NetName=LSTB2_STA Pin=4-3
+Added Pin To Net: NetName=LSTB2_PWM Pin=4-4
+Added Pin To Net: NetName=LSTB2_OUT Pin=D23-1
+Added Pin To Net: NetName=VALVES+ Pin=D23-2
+Added Room: Name=23D_ESC_DRIVER

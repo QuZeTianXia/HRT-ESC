@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=L9349_ENABLE Pin=J2-5
+Removed Pin From Net: NetName=L9349_ENABLE Pin=J2-6
+Removed Pin From Net: NetName=RSTB2_STA Pin=J2-7
+Removed Pin From Net: NetName=RSTB1_STA Pin=J2-8
+Removed Pin From Net: NetName=RTC_STA Pin=J2-9
+Removed Pin From Net: NetName=LSTB2_STA Pin=J2-10
+Removed Pin From Net: NetName=LSTB1_STA Pin=J2-11
+Removed Pin From Net: NetName=LTC_STA Pin=J2-12
+Removed Pin From Net: NetName=RBO_STA Pin=J2-13
+Removed Pin From Net: NetName=RBI_STA Pin=J2-14
+Removed Pin From Net: NetName=LSTB2_STA Pin=J2-16
+Removed Pin From Net: NetName=LBO_STA Pin=J2-17
+Added Pin To Net: NetName=RFO_STA Pin=J2-7
+Added Pin To Net: NetName=RFI_STA Pin=J2-8
+Added Pin To Net: NetName=RBI_STA Pin=J2-9
+Added Pin To Net: NetName=RBO_STA Pin=J2-10
+Added Pin To Net: NetName=LFI_STA Pin=J2-11
+Added Pin To Net: NetName=LFO_STA Pin=J2-12
+Added Pin To Net: NetName=LBI_STA Pin=J2-13
+Added Pin To Net: NetName=LBO_STA Pin=J2-14
+Added Pin To Net: NetName=LSTB1_STA Pin=J2-16
+Added Pin To Net: NetName=LSTB2_STA Pin=J2-17
+Added Room: Name=23D_ESC_Controller

@@ -1,0 +1,38 @@
+Bill of Material for 
+On 2023/2/19 at 10:59:49
+
+ Comment             Pattern     Quantity  Components
+------------------------------------------------------------------------------
+ 100uH               L 1812           1    L3                           电感                   
+ 104                 C 0805           1    C9                           无极性电容                
+ 10K                 R 0603           2    R1, R2                       电阻                   
+ 10K                 R 0805           1    R10                          电阻                   
+ 10R                 R 0805           2    R6, R9                       电阻                   
+ 10uF                C 0805           5    C2, C3, C4, C5, C6           无极性电容                
+ 120T3G              DO-214           7    D14, D15, D16, D17, D18, D19 二极管                  
+                                           D20
+ 18V                 LL34             1    D5                                                
+ 1K                  R 0603           3    R3, R7, R8                   电阻                   
+ 2.2K                R 0805           1    R11                          电阻                   
+ 2.2uF               C 0805          14    C24, C25, C26, C27, C28, C29 无极性电容                
+                                           C30, C31, C32, C33, C34, C35
+                                           C36, C37
+ 20P_Female          B2B_1.27_Female    3    J5, J6, J7                   板对板连接器 母头            
+ 25V 10uF            CP 3528B         1    C8                           极性电容                 
+ 330R                R 0805           1    R5                           电阻                   
+ 50V 104             C 0805           1    C1                           无极性电容                
+ 50V 10uF            C 0805           1    C7                           无极性电容                
+ 6.8R@Ipeak=167mA    R 0805           1    R4                           电阻                   
+ AUIR3241S           SOP8             1    U1                           B2B MOSFET Driver    
+ Blue                LED_0805         1    D4                           发光二极管                
+ ES1B-E3/61T         DO-214AC         1    D6                           二极管                  
+ Inductor            L 0805           4    L1, L2, L4, L5               电感                   
+ IR2184              SOP8             1    U4                           Half-Bridge Gate Driver 
+ L9348               PowerSO-36       4    U2, U3, U5, U6               4路电磁阀驱动              
+ MX34_28             mx34_28          1    U7                                                
+ Orange              LED_0805         1    D1                           发光二极管                
+ P6SMB18             DO-214AA         1    D3                           BiDir TVS Diode      
+ SMT_Connector       SMT_Connector    4    J1, J2, J3, J4               表贴接线端                
+ SQD40N06            TO252            1    VT1                                               
+ STB170NF04          TO263-3B         2    VT2, VT3                                          
+ V40PWM45C           TO252_DIO        1    D2                           二极管                  

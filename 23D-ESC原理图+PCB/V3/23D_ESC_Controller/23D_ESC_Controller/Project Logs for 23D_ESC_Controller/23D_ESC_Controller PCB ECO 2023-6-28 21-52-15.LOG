@@ -1,0 +1,85 @@
+Added Component: Designator=U?(TQFP100N50P14X14X1.2)
+Added Pin To Net: NetName=ANL_REF Pin=U?-21
+Added Pin To Net: NetName=ANL_REF Pin=U?-22
+Added Net: Name=ANL_REF
+Added Pin To Net: NetName=CAN_RX Pin=U?-70
+Added Net: Name=CAN_RX
+Added Pin To Net: NetName=CAN_TX Pin=U?-71
+Added Net: Name=CAN_TX
+Added Pin To Net: NetName=DR1_STA Pin=U?-40
+Added Net: Name=DR1_STA
+Added Pin To Net: NetName=DR2_STA Pin=U?-46
+Added Net: Name=DR2_STA
+Added Pin To Net: NetName=DR3_STA Pin=U?-38
+Added Net: Name=DR3_STA
+Added Pin To Net: NetName=DR4_STA Pin=U?-48
+Added Net: Name=DR4_STA
+Added Pin To Net: NetName=GND_D Pin=U?-19
+Added Pin To Net: NetName=GND_D Pin=U?-20
+Added Pin To Net: NetName=GND_D Pin=U?-27
+Added Pin To Net: NetName=GND_D Pin=U?-49
+Added Pin To Net: NetName=GND_D Pin=U?-74
+Added Pin To Net: NetName=GND_D Pin=U?-99
+Added Net: Name=GND_D
+Added Pin To Net: NetName=L9348_EN Pin=U?-87
+Added Net: Name=L9348_EN
+Added Pin To Net: NetName=LBI Pin=U?-25
+Added Net: Name=LBI
+Added Pin To Net: NetName=LBO Pin=U?-35
+Added Net: Name=LBO
+Added Pin To Net: NetName=LED1 Pin=U?-52
+Added Net: Name=LED1
+Added Pin To Net: NetName=LED2 Pin=U?-51
+Added Net: Name=LED2
+Added Pin To Net: NetName=LFI Pin=U?-95
+Added Net: Name=LFI
+Added Pin To Net: NetName=LFO Pin=U?-69
+Added Net: Name=LFO
+Added Pin To Net: NetName=LSTB1 Pin=U?-67
+Added Net: Name=LSTB1
+Added Pin To Net: NetName=LSTB2 Pin=U?-31
+Added Net: Name=LSTB2
+Added Pin To Net: NetName=LTC Pin=U?-93
+Added Net: Name=LTC
+Added Pin To Net: NetName=NetC?_1 Pin=U?-8
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetC?_2 Pin=U?-12
+Added Net: Name=NetC?_2
+Added Pin To Net: NetName=NetR?_1 Pin=U?-94
+Added Net: Name=NetR?_1
+Added Pin To Net: NetName=PUMP Pin=U?-92
+Added Net: Name=PUMP
+Added Pin To Net: NetName=RBI Pin=U?-96
+Added Net: Name=RBI
+Added Pin To Net: NetName=RBO Pin=U?-68
+Added Net: Name=RBO
+Added Pin To Net: NetName=RESET Pin=U?-14
+Added Net: Name=RESET
+Added Pin To Net: NetName=RFI Pin=U?-24
+Added Net: Name=RFI
+Added Pin To Net: NetName=RFO Pin=U?-26
+Added Net: Name=RFO
+Added Pin To Net: NetName=RSTB1 Pin=U?-32
+Added Net: Name=RSTB1
+Added Pin To Net: NetName=RSTB2 Pin=U?-36
+Added Net: Name=RSTB2
+Added Pin To Net: NetName=RTC Pin=U?-23
+Added Net: Name=RTC
+Added Pin To Net: NetName=SERVO_EN Pin=U?-84
+Added Net: Name=SERVO_EN
+Added Pin To Net: NetName=SWCLK Pin=U?-76
+Added Net: Name=SWCLK
+Added Pin To Net: NetName=SWIO Pin=U?-72
+Added Net: Name=SWIO
+Added Pin To Net: NetName=VALVE_EN Pin=U?-42
+Added Net: Name=VALVE_EN
+Added Pin To Net: NetName=VALVES+ Pin=U?-44
+Added Net: Name=VALVES+
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-11
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-28
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-50
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-75
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-100
+Added Net: Name=VCC_3V3
+Added Class: Name=23D_ESC_Controller
+Added Room: Name=23D_ESC_Controller

@@ -1,0 +1,211 @@
+Removed Pin From Net: NetName=VCC_14V Pin=C?-1
+Removed Pin From Net: NetName=VCC_14V Pin=C?-2
+Removed Pin From Net: NetName=VCC_14V Pin=D?-1
+Removed Pin From Net: NetName=VCC_14V Pin=VT?-2
+Removed Pin From Net: NetName=POWERGND Pin=VT?-3
+Change Component Designator: OldDesignator=* NewDesignator=1
+Change Component Designator: OldDesignator=*? NewDesignator=2
+Change Component Designator: OldDesignator=*? NewDesignator=3
+Change Component Designator: OldDesignator=*? NewDesignator=4
+Change Component Designator: OldDesignator=C? NewDesignator=C9
+Change Component Designator: OldDesignator=CN? NewDesignator=CN1
+Change Component Designator: OldDesignator=D? NewDesignator=D3
+Change Component Designator: OldDesignator=D? NewDesignator=D4
+Change Component Designator: OldDesignator=D? NewDesignator=D10
+Change Component Designator: OldDesignator=D? NewDesignator=D15
+Change Component Designator: OldDesignator=D? NewDesignator=D20
+Change Component Designator: OldDesignator=D? NewDesignator=D21
+Change Component Designator: OldDesignator=D? NewDesignator=D25
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=J? NewDesignator=J4
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Change Component Designator: OldDesignator=J? NewDesignator=J6
+Change Component Designator: OldDesignator=J? NewDesignator=J7
+Change Component Designator: OldDesignator=L? NewDesignator=L1
+Change Component Designator: OldDesignator=Q? NewDesignator=Q1
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Change Component Designator: OldDesignator=VT? NewDesignator=VT1
+Added Component: Designator=D6(LED_0805)
+Added Component: Designator=D7(LED_0805)
+Added Component: Designator=D8(DO-214)
+Added Component: Designator=D9(DO-214)
+Added Component: Designator=D11(DO-214)
+Added Component: Designator=D12(DO-214)
+Added Component: Designator=D13(DO-214)
+Added Component: Designator=D14(DO-214)
+Added Component: Designator=D16(DO-214)
+Added Component: Designator=D17(DO-214)
+Added Component: Designator=D18(DO-214)
+Added Component: Designator=D19(DO-214)
+Added Component: Designator=D22(DO-214)
+Added Component: Designator=D23(DO-214)
+Added Component: Designator=D24(DO-214)
+Added Component: Designator=L2(L 0805)
+Added Component: Designator=L3(L 0805)
+Added Component: Designator=L4(L 0805)
+Added Component: Designator=L5(L 0805)
+Added Component: Designator=Q2(TO-252-2_L6.6-W6.1-P4.58-LS9.9-BR)
+Added Pin To Net: NetName=POWERGND Pin=CN1-1
+Added Pin To Net: NetName=MOTOR+ Pin=CN1-2
+Added Pin To Net: NetName=POWERGND Pin=CN1-3
+Added Pin To Net: NetName=MOTOR+ Pin=CN1-4
+Added Pin To Net: NetName=LSTB1_OUT Pin=CN1-5
+Added Pin To Net: NetName=RSTB2_OUT Pin=CN1-6
+Added Pin To Net: NetName=VALVES+ Pin=CN1-7
+Added Pin To Net: NetName=VALVES+ Pin=CN1-8
+Added Pin To Net: NetName=LSTB2_OUT Pin=CN1-9
+Added Pin To Net: NetName=RSTB1_OUT Pin=CN1-10
+Added Pin To Net: NetName=RBO_OUT Pin=CN1-11
+Added Pin To Net: NetName=VALVES+ Pin=CN1-12
+Added Pin To Net: NetName=VALVES+ Pin=CN1-13
+Added Pin To Net: NetName=LBO_OUT Pin=CN1-14
+Added Pin To Net: NetName=LFO_OUT Pin=CN1-15
+Added Pin To Net: NetName=VALVES+ Pin=CN1-16
+Added Pin To Net: NetName=VALVES+ Pin=CN1-17
+Added Pin To Net: NetName=RFO_OUT Pin=CN1-18
+Added Pin To Net: NetName=VALVES+ Pin=CN1-19
+Added Pin To Net: NetName=VALVES+ Pin=CN1-20
+Added Pin To Net: NetName=LTC_OUT Pin=CN1-21
+Added Pin To Net: NetName=RTC_OUT Pin=CN1-22
+Added Pin To Net: NetName=VALVES+ Pin=CN1-23
+Added Pin To Net: NetName=VALVES+ Pin=CN1-24
+Added Pin To Net: NetName=LFI_OUT Pin=CN1-25
+Added Pin To Net: NetName=RFI_OUT Pin=CN1-26
+Added Pin To Net: NetName=RBI_OUT Pin=CN1-27
+Added Pin To Net: NetName=VALVES+ Pin=CN1-28
+Added Pin To Net: NetName=VALVES+ Pin=CN1-29
+Added Pin To Net: NetName=LBI_OUT Pin=CN1-30
+Added Pin To Net: NetName=POWERGND Pin=D6-2
+Added Pin To Net: NetName=POWERGND Pin=D7-2
+Added Pin To Net: NetName=LFI_OUT Pin=D8-1
+Added Pin To Net: NetName=VALVES+ Pin=D8-2
+Added Pin To Net: NetName=LFO_OUT Pin=D9-1
+Added Pin To Net: NetName=VALVES+ Pin=D9-2
+Added Pin To Net: NetName=RFI_OUT Pin=D11-1
+Added Pin To Net: NetName=VALVES+ Pin=D11-2
+Added Pin To Net: NetName=RFO_OUT Pin=D12-1
+Added Pin To Net: NetName=VALVES+ Pin=D12-2
+Added Pin To Net: NetName=LBI_OUT Pin=D13-1
+Added Pin To Net: NetName=VALVES+ Pin=D13-2
+Added Pin To Net: NetName=LBO_OUT Pin=D14-1
+Added Pin To Net: NetName=VALVES+ Pin=D14-2
+Added Pin To Net: NetName=RBI_OUT Pin=D16-1
+Added Pin To Net: NetName=VALVES+ Pin=D16-2
+Added Pin To Net: NetName=RBO_OUT Pin=D17-1
+Added Pin To Net: NetName=VALVES+ Pin=D17-2
+Added Pin To Net: NetName=RTC_OUT Pin=D18-1
+Added Pin To Net: NetName=VALVES+ Pin=D18-2
+Added Pin To Net: NetName=LTC_OUT Pin=D19-1
+Added Pin To Net: NetName=VALVES+ Pin=D19-2
+Added Pin To Net: NetName=LSTB1_OUT Pin=D21-1
+Added Pin To Net: NetName=VALVES+ Pin=D21-2
+Added Pin To Net: NetName=LSTB2_OUT Pin=D22-1
+Added Pin To Net: NetName=VALVES+ Pin=D22-2
+Added Pin To Net: NetName=RSTB1_OUT Pin=D23-1
+Added Pin To Net: NetName=VALVES+ Pin=D23-2
+Added Pin To Net: NetName=RSTB2_OUT Pin=D24-1
+Added Pin To Net: NetName=VALVES+ Pin=D24-2
+Added Pin To Net: NetName=POWERGND Pin=L2-1
+Added Pin To Net: NetName=POWERGND Pin=L3-1
+Added Pin To Net: NetName=POWERGND Pin=L4-1
+Added Pin To Net: NetName=POWERGND Pin=L5-1
+Added Pin To Net: NetName=VCC_14V Pin=Q1-2
+Added Pin To Net: NetName=MOTOR+ Pin=Q1-3
+Added Pin To Net: NetName=MOTOR+ Pin=Q2-2
+Added Pin To Net: NetName=POWERGND Pin=Q2-3
+Added Pin To Net: NetName=VALVES+ Pin=VT1-3
+Change Net Name : Old Net Name=Net*?_5 New Net Name=Net4_5
+Change Net Name : Old Net Name=Net*_5 New Net Name=Net1_5
+Change Net Name : Old Net Name=NetL?_1 New Net Name=NetL1_1
+Added Pin To Net: NetName=GND1 Pin=1-15
+Added Pin To Net: NetName=GND1 Pin=L2-2
+Added Net: Name=GND1
+Added Pin To Net: NetName=GND2 Pin=2-15
+Added Pin To Net: NetName=GND2 Pin=L3-2
+Added Net: Name=GND2
+Added Pin To Net: NetName=GND3 Pin=3-15
+Added Pin To Net: NetName=GND3 Pin=L4-2
+Added Net: Name=GND3
+Added Pin To Net: NetName=GND4 Pin=4-15
+Added Pin To Net: NetName=GND4 Pin=L5-2
+Added Net: Name=GND4
+Added Pin To Net: NetName=Net2_5 Pin=2-5
+Added Pin To Net: NetName=Net2_5 Pin=D15-2
+Added Net: Name=Net2_5
+Added Pin To Net: NetName=Net3_5 Pin=3-5
+Added Pin To Net: NetName=Net3_5 Pin=D20-2
+Added Net: Name=Net3_5
+Added Pin To Net: NetName=NetC1_1 Pin=U1-8
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC3_1 Pin=U2-8
+Added Net: Name=NetC3_1
+Added Pin To Net: NetName=NetD1_2 Pin=VT1-2
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=R3-2
+Added Net: Name=NetD4_1
+Added Pin To Net: NetName=NetD5_2 Pin=VT1-1
+Added Net: Name=NetD5_2
+Added Pin To Net: NetName=NetD6_1 Pin=D6-1
+Added Net: Name=NetD6_1
+Added Pin To Net: NetName=NetD7_1 Pin=D7-1
+Added Net: Name=NetD7_1
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Net: Name=NetQ1_1
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-1
+Added Net: Name=NetQ2_1
+Added Pin To Net: NetName=NetR1_2 Pin=U1-1
+Added Net: Name=NetR1_2
+Added Pin To Net: NetName=NetR2_1 Pin=U2-7
+Added Net: Name=NetR2_1
+Added Pin To Net: NetName=NetR4_2 Pin=U2-1
+Added Net: Name=NetR4_2
+Added Pin To Net: NetName=NetR5_2 Pin=U1-3
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetR6_1 Pin=U1-6
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=NetR7_2 Pin=U2-2
+Added Net: Name=NetR7_2
+Added Pin To Net: NetName=NetR8_1 Pin=U2-4
+Added Net: Name=NetR8_1
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component 3 POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component 4 POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D4 RED
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D6 orange
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D7 orange
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D8 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D9 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D10 SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D11 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D12 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D13 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D14 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D15 SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D16 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D17 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D18 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D19 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D20 SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D21 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D22 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D23 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D24 120T3G
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D25 SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J1 SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J2 SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J3 SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J4 SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J5 2.54-1*20P÷±’Î
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J6 2.54-1*20P÷±’Î
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component L2 Inductor
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component L3 Inductor
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component L4 Inductor
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component L5 Inductor
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component Q1 LR7843-VB
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component Q2 LR7843-VB
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component U2 IR2184
+Added Room: Name=23D_ESC_DRIVER

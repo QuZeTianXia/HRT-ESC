@@ -1,0 +1,10 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [ER100_ESC.PrjPCB]
+   Generated File[Pick Place for ER100_Driver.txt]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 20:06:01 On 2023/2/19

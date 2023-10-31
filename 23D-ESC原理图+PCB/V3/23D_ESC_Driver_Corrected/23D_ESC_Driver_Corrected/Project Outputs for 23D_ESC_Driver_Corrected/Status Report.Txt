@@ -1,0 +1,10 @@
+Output: Mixed Sim
+Type  : AdvSimNetlist
+From  : Project [23D_ESC_Driver_Corrected.PrjPcb]
+   Generated File[23D_ESC_Driver_Corrected.nsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 19:39:26 On 2023/9/5

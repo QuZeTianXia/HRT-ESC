@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=P_GND Pin=U7-2
+Removed Pin From Net: NetName=R_TC Pin=U7-15
+Added Pin To Net: NetName=R_TC Pin=U7-2
+Added Pin To Net: NetName=P_GND Pin=U7-15
+Added Room: Name=HRT_D ER100 V1.0

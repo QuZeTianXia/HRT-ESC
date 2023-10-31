@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=POWERGND Pin=R5-1
+Removed Pin From Net: NetName=NetR5_2 Pin=R5-2
+Added Component: Designator=R5(R 0805)
+Added Pin To Net: NetName=POWERGND Pin=R5-1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Room: Name=23D_ESC_DRIVER

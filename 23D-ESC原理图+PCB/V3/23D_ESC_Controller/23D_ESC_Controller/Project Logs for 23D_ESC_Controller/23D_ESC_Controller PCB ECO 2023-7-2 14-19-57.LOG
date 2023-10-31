@@ -1,0 +1,56 @@
+Removed Pin From Net: NetName=RFO Pin=1-4
+Removed Pin From Net: NetName=PUMP Pin=1-6
+Removed Pin From Net: NetName=RSTB2 Pin=1-7
+Removed Pin From Net: NetName=RSTB1 Pin=1-8
+Removed Pin From Net: NetName=PUMP_ENABLE Pin=2-1
+Removed Pin From Net: NetName=VALVES_ENABLE Pin=2-2
+Removed Pin From Net: NetName=L9349_ENABLE Pin=2-3
+Removed Pin From Net: NetName=RFO_STA Pin=2-4
+Removed Pin From Net: NetName=L9349_ENABLE Pin=2-5
+Removed Pin From Net: NetName=L9349_ENABLE Pin=2-6
+Removed Pin From Net: NetName=RSTB2_STA Pin=2-7
+Removed Pin From Net: NetName=RSTB1_STA Pin=2-8
+Removed Member From Class: ClassName=23D_ESC_Controller Member=1
+Removed Member From Class: ClassName=23D_ESC_Controller Member=2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Added Component: Designator=J?(HDR-TH_20P-P2.54-V-M-1)
+Added Component: Designator=J?(HDR-TH_20P-P2.54-V-M-1)
+Added Pin To Net: NetName=PUMP_ENABLE Pin=J?-1
+Added Pin To Net: NetName=VALVES_ENABLE Pin=J?-2
+Added Pin To Net: NetName=L9349_ENABLE Pin=J?-3
+Added Pin To Net: NetName=L9349_ENABLE Pin=J?-4
+Added Pin To Net: NetName=L9349_ENABLE Pin=J?-5
+Added Pin To Net: NetName=L9349_ENABLE Pin=J?-6
+Added Pin To Net: NetName=PUMP Pin=J?-6
+Added Pin To Net: NetName=RSTB2_STA Pin=J?-7
+Added Pin To Net: NetName=RSTB2 Pin=J?-7
+Added Pin To Net: NetName=RSTB1_STA Pin=J?-8
+Added Pin To Net: NetName=RSTB1 Pin=J?-8
+Added Pin To Net: NetName=RTC_STA Pin=J?-9
+Added Pin To Net: NetName=RTC Pin=J?-9
+Added Pin To Net: NetName=LSTB2_STA Pin=J?-10
+Added Pin To Net: NetName=LSTB2 Pin=J?-10
+Added Pin To Net: NetName=LSTB1_STA Pin=J?-11
+Added Pin To Net: NetName=LSTB1 Pin=J?-11
+Added Pin To Net: NetName=LTC_STA Pin=J?-12
+Added Pin To Net: NetName=LTC Pin=J?-12
+Added Pin To Net: NetName=RBO_STA Pin=J?-13
+Added Pin To Net: NetName=RBO Pin=J?-13
+Added Pin To Net: NetName=RBI_STA Pin=J?-14
+Added Pin To Net: NetName=RBI Pin=J?-14
+Added Pin To Net: NetName=RFO_STA Pin=J?-15
+Added Pin To Net: NetName=RFO Pin=J?-15
+Added Pin To Net: NetName=RFI_STA Pin=J?-16
+Added Pin To Net: NetName=RFI Pin=J?-16
+Added Pin To Net: NetName=LBO_STA Pin=J?-17
+Added Pin To Net: NetName=LBO Pin=J?-17
+Added Pin To Net: NetName=LBI_STA Pin=J?-18
+Added Pin To Net: NetName=LBI Pin=J?-18
+Added Pin To Net: NetName=LFO_STA Pin=J?-19
+Added Pin To Net: NetName=LFO Pin=J?-19
+Added Pin To Net: NetName=LFI_STA Pin=J?-20
+Added Pin To Net: NetName=LFI Pin=J?-20
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component J3 2.54-1*20P÷±’Î
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component J? 2.54-1*20P÷±’Î
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component J? 2.54-1*20P÷±’Î
+Added Room: Name=23D_ESC_Controller

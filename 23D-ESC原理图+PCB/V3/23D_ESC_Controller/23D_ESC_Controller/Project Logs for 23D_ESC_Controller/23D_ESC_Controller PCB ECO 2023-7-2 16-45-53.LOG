@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=KEY1 Pin=U1-1
+Removed Pin From Net: NetName=KEY3 Pin=U1-3
+Added Pin To Net: NetName=KEY3 Pin=U1-1
+Added Pin To Net: NetName=KEY1 Pin=U1-3
+Added Room: Name=23D_ESC_Controller

@@ -1,0 +1,3 @@
+Change Component Comment : Designator=Y1 Old Comment=8M New Comment=32.768KHz
+Change Component Comment : Designator=Y2 Old Comment=32.768M New Comment=8MKz
+Added Room: Name=23D_ESC_Controller

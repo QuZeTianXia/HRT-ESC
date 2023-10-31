@@ -1,0 +1,125 @@
+Removed Pin From Net: NetName=GND_D Pin=C2-1
+Removed Pin From Net: NetName=VCC_5V Pin=C2-2
+Removed Pin From Net: NetName=GND_D Pin=C9-1
+Removed Pin From Net: NetName=VCC_5V Pin=C9-2
+Removed Pin From Net: NetName=GND_D Pin=C11-1
+Removed Pin From Net: NetName=RESET Pin=C11-2
+Removed Pin From Net: NetName=GND_D Pin=C14-1
+Removed Pin From Net: NetName=VCC_5V Pin=C14-2
+Removed Member From Class: ClassName=23D_ESC_Controller Member=C2
+Removed Member From Class: ClassName=23D_ESC_Controller Member=C9
+Removed Member From Class: ClassName=23D_ESC_Controller Member=C11
+Removed Member From Class: ClassName=23D_ESC_Controller Member=C14
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=Y?(XTAL-5032)
+Added Component: Designator=Y?(XTAL-5032)
+Added Pin To Net: NetName=LBI Pin=*1-4
+Added Pin To Net: NetName=LBO Pin=*1-4
+Added Pin To Net: NetName=LFI Pin=*1-4
+Added Pin To Net: NetName=LFO Pin=*1-4
+Added Pin To Net: NetName=LSTB1 Pin=*1-4
+Added Pin To Net: NetName=LSTB2 Pin=*1-4
+Added Pin To Net: NetName=LTC Pin=*1-4
+Added Pin To Net: NetName=RBI Pin=*1-4
+Added Pin To Net: NetName=RBO Pin=*1-4
+Added Pin To Net: NetName=RFI Pin=*1-4
+Added Pin To Net: NetName=RTC Pin=*1-4
+Added Pin To Net: NetName=L9349_ENABLE Pin=*2-4
+Added Pin To Net: NetName=LBI_STA Pin=*2-4
+Added Pin To Net: NetName=LBO_STA Pin=*2-4
+Added Pin To Net: NetName=LFI_STA Pin=*2-4
+Added Pin To Net: NetName=LFO_STA Pin=*2-4
+Added Pin To Net: NetName=LSTB1_STA Pin=*2-4
+Added Pin To Net: NetName=LSTB2_STA Pin=*2-4
+Added Pin To Net: NetName=LTC_STA Pin=*2-4
+Added Pin To Net: NetName=RBI_STA Pin=*2-4
+Added Pin To Net: NetName=RBO_STA Pin=*2-4
+Added Pin To Net: NetName=RFI_STA Pin=*2-4
+Added Pin To Net: NetName=RTC_STA Pin=*2-4
+Added Pin To Net: NetName=ANL_REF Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=KEY1 Pin=C?-1
+Added Pin To Net: NetName=KEY2 Pin=C?-1
+Added Pin To Net: NetName=KEY3 Pin=C?-1
+Added Pin To Net: NetName=RESET Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-2
+Added Pin To Net: NetName=VCC_5V Pin=C?-2
+Added Pin To Net: NetName=VCC_5V Pin=C?-2
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=U2-28
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=U2-12
+Added Pin To Net: NetName=NetC?_2 Pin=Y?-2
+Added Net: Name=NetC?_2
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component Y? 32.768M
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component Y? 8M

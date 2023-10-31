@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=PUMP_PWM Pin=U1-39
+Removed Pin From Net: NetName=PUMP_EN Pin=U1-40
+Added Component: Designator=ÅÅÕë(HDR2.54-M-LI-2P)
+Added Pin To Net: NetName=PUMP_PWM Pin=U1-28
+Added Pin To Net: NetName=PUMP_EN Pin=U1-32
+Added Pin To Net: NetName=USART_RX Pin=U1-34
+Added Pin To Net: NetName=USART_RX Pin=ÅÅÕë-2
+Added Net: Name=USART_RX
+Added Pin To Net: NetName=USART_TX Pin=U1-35
+Added Pin To Net: NetName=USART_TX Pin=ÅÅÕë-1
+Added Net: Name=USART_TX
+Added Member To Class: ClassName=Pump_Driver_Test Member=Component ÅÅÕë ÅÅÄ¸1*2
+Added Room: Name=Pump_Driver_Test

@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=LSTB2_PWM Pin=J5-4
+Removed Pin From Net: NetName=LSTB1_PWM Pin=J5-5
+Removed Pin From Net: NetName=LTC_PWM Pin=J5-6
+Removed Pin From Net: NetName=RBO_PWM Pin=J5-7
+Removed Pin From Net: NetName=RBI_PWM Pin=J5-8
+Removed Pin From Net: NetName=LBO_PWM Pin=J5-9
+Removed Pin From Net: NetName=LBI_PWM Pin=J5-10
+Removed Pin From Net: NetName=RFI_PWM Pin=J5-14
+Removed Pin From Net: NetName=LFI_PWM Pin=J5-16
+Removed Pin From Net: NetName=RTC_PWM Pin=J5-17
+Removed Pin From Net: NetName=RSTB2_PWM Pin=J5-18
+Removed Pin From Net: NetName=RSTB1_PWM Pin=J5-19
+Removed Pin From Net: NetName=RFO_PWM Pin=J5-20
+Added Pin To Net: NetName=RSTB1_PWM Pin=J5-4
+Added Pin To Net: NetName=RSTB2_PWM Pin=J5-5
+Added Pin To Net: NetName=LBO_PWM Pin=J5-6
+Added Pin To Net: NetName=LSTB1_PWM Pin=J5-7
+Added Pin To Net: NetName=LSTB2_PWM Pin=J5-8
+Added Pin To Net: NetName=RBO_PWM Pin=J5-9
+Added Pin To Net: NetName=RFO_PWM Pin=J5-10
+Added Pin To Net: NetName=RTC_OUT Pin=J5-14
+Added Pin To Net: NetName=LTC_PWM Pin=J5-16
+Added Pin To Net: NetName=LFI_PWM Pin=J5-17
+Added Pin To Net: NetName=RBI_PWM Pin=J5-18
+Added Pin To Net: NetName=LBI_PWM Pin=J5-19
+Added Pin To Net: NetName=RFI_PWM Pin=J5-20
+Added Room: Name=23D_ESC_DRIVER

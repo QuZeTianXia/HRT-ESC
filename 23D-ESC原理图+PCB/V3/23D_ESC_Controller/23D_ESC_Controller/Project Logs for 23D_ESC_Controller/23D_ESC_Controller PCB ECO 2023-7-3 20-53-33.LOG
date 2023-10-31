@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=USART1_TX Pin=*-2
+Removed Pin From Net: NetName=USART1_RX Pin=*-3
+Removed Pin From Net: NetName=VCC_5V Pin=*-4
+Added Component: Designator=*(HDR2.54-M-LI-6P)
+Added Pin To Net: NetName=USART1_TX Pin=*-2
+Added Pin To Net: NetName=USART1_RX Pin=*-3
+Added Pin To Net: NetName=GND_D Pin=*-4
+Added Pin To Net: NetName=VCC_5V Pin=*-5

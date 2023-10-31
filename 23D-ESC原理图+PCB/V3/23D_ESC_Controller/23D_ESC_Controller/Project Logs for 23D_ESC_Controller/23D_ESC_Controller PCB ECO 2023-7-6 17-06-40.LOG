@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=RFO_STA Pin=J2-15
+Removed Pin From Net: NetName=RFI_STA Pin=J2-16
+Removed Pin From Net: NetName=LBI_STA Pin=J2-18
+Removed Pin From Net: NetName=LFO_STA Pin=J2-19
+Removed Pin From Net: NetName=LFI_STA Pin=J2-20
+Added Pin To Net: NetName=LTC_STA Pin=J2-15
+Added Pin To Net: NetName=LSTB2_STA Pin=J2-16
+Added Pin To Net: NetName=RTC_STA Pin=J2-18
+Added Pin To Net: NetName=RSTB1_STA Pin=J2-19
+Added Pin To Net: NetName=RSTB2_STA Pin=J2-20
+Added Room: Name=23D_ESC_Controller

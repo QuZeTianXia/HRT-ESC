@@ -1,0 +1,139 @@
+Removed Pin From Net: NetName=POWERGND Pin=*-1
+Removed Pin From Net: NetName=PUMP_ENABLE Pin=*-1
+Removed Pin From Net: NetName=POWERGND Pin=*-2
+Removed Pin From Net: NetName=VALVES_ENABLE Pin=*-2
+Removed Pin From Net: NetName=L9349_ENABLE Pin=*-3
+Removed Pin From Net: NetName=POWERGND Pin=*-3
+Removed Pin From Net: NetName=POWERGND Pin=*-4
+Removed Pin From Net: NetName=RTC_STA Pin=*-4
+Removed Pin From Net: NetName=RTC Pin=*-4
+Removed Pin From Net: NetName=L9349_ENABLE Pin=*-5
+Removed Pin From Net: NetName=POWERGND Pin=*-5
+Removed Pin From Net: NetName=L9349_ENABLE Pin=*-6
+Removed Pin From Net: NetName=POWERGND Pin=*-6
+Removed Pin From Net: NetName=POWERGND Pin=*-7
+Removed Pin From Net: NetName=RSTB2_STA Pin=*-7
+Removed Pin From Net: NetName=RSTB2 Pin=*-7
+Removed Pin From Net: NetName=POWERGND Pin=*-8
+Removed Pin From Net: NetName=RSTB1_STA Pin=*-8
+Removed Pin From Net: NetName=RSTB1 Pin=*-8
+Removed Pin From Net: NetName=VCC_14V Pin=C?-1
+Removed Pin From Net: NetName=VCC_14V Pin=C?-2
+Removed Pin From Net: NetName=VALVES_ENABLE Pin=R?-1
+Removed Pin From Net: NetName=NetR?_2 Pin=R?-2
+Removed Pin From Net: NetName=VCC_14V Pin=VT?-2
+Added Component: Designator=J?(HDR2.54-LI-20P)
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=POWERGND Pin=C?-1
+Added Pin To Net: NetName=VCC_14V Pin=C?-1
+Added Pin To Net: NetName=MOTOR+ Pin=C?-2
+Added Pin To Net: NetName=POWERGND Pin=C?-2
+Added Pin To Net: NetName=VCC_14V Pin=C?-2
+Added Pin To Net: NetName=VCC_14V Pin=C?-2
+Added Pin To Net: NetName=VALVES+ Pin=D?-1
+Added Pin To Net: NetName=VCC_14V Pin=D?-1
+Added Pin To Net: NetName=VCC_14V Pin=D?-1
+Added Pin To Net: NetName=NetC?_1 Pin=D?-2
+Added Pin To Net: NetName=NetD?_2 Pin=D?-2
+Added Pin To Net: NetName=LSTB2 Pin=J?-3
+Added Pin To Net: NetName=VCC_14V Pin=J?-3
+Added Pin To Net: NetName=VCC_14V Pin=J?-4
+Added Pin To Net: NetName=LSTB1 Pin=J?-5
+Added Pin To Net: NetName=LTC Pin=J?-6
+Added Pin To Net: NetName=RBO Pin=J?-7
+Added Pin To Net: NetName=RFO_STA Pin=J?-7
+Added Pin To Net: NetName=RBI Pin=J?-8
+Added Pin To Net: NetName=LBO Pin=J?-9
+Added Pin To Net: NetName=RBI_STA Pin=J?-9
+Added Pin To Net: NetName=LBI Pin=J?-10
+Added Pin To Net: NetName=RBO_STA Pin=J?-10
+Added Pin To Net: NetName=LFI_STA Pin=J?-11
+Added Pin To Net: NetName=PUMP_ENABLE Pin=J?-11
+Added Pin To Net: NetName=L9349_ENABLE Pin=J?-12
+Added Pin To Net: NetName=LFO_STA Pin=J?-12
+Added Pin To Net: NetName=LBI_STA Pin=J?-13
+Added Pin To Net: NetName=VALVES_ENABLE Pin=J?-13
+Added Pin To Net: NetName=LBO_STA Pin=J?-14
+Added Pin To Net: NetName=RFI Pin=J?-14
+Added Pin To Net: NetName=LFO Pin=J?-15
+Added Pin To Net: NetName=LTC_STA Pin=J?-15
+Added Pin To Net: NetName=LFI Pin=J?-16
+Added Pin To Net: NetName=LSTB1_STA Pin=J?-16
+Added Pin To Net: NetName=LSTB2_STA Pin=J?-17
+Added Pin To Net: NetName=RTC Pin=J?-17
+Added Pin To Net: NetName=RSTB2 Pin=J?-18
+Added Pin To Net: NetName=RTC_STA Pin=J?-18
+Added Pin To Net: NetName=RSTB1_STA Pin=J?-19
+Added Pin To Net: NetName=RSTB1 Pin=J?-19
+Added Pin To Net: NetName=RFO Pin=J?-20
+Added Pin To Net: NetName=RSTB2_STA Pin=J?-20
+Added Pin To Net: NetName=NetR?_1 Pin=R?-1
+Added Pin To Net: NetName=POWERGND Pin=R?-1
+Added Pin To Net: NetName=PUMP_ENABLE Pin=R?-1
+Added Pin To Net: NetName=PUMP_PWM Pin=R?-1
+Added Pin To Net: NetName=VALVES_ENABLE Pin=R?-1
+Added Pin To Net: NetName=VCC_14V Pin=R?-1
+Added Pin To Net: NetName=NetD?_1 Pin=R?-2
+Added Pin To Net: NetName=NetD?_2 Pin=R?-2
+Added Pin To Net: NetName=NetR?_2 Pin=R?-2
+Added Pin To Net: NetName=MOTOR+ Pin=VT?-2
+Added Pin To Net: NetName=VCC_14V Pin=VT?-2
+Added Pin To Net: NetName=MOTOR+ Pin=VT?-3
+Added Pin To Net: NetName=POWERGND Pin=VT?-3
+Added Pin To Net: NetName=GND_D Pin=J?-1
+Added Pin To Net: NetName=GND_D Pin=J?-1
+Added Pin To Net: NetName=GND_D Pin=J?-2
+Added Pin To Net: NetName=GND_D Pin=J?-2
+Added Pin To Net: NetName=GND_D Pin=J?-3
+Added Pin To Net: NetName=GND_D Pin=J?-4
+Added Pin To Net: NetName=GND_D Pin=J?-5
+Added Pin To Net: NetName=GND_D Pin=J?-6
+Added Pin To Net: NetName=GND_D Pin=J?-7
+Added Pin To Net: NetName=GND_D Pin=J?-8
+Added Pin To Net: NetName=GND_D Pin=J?-9
+Added Pin To Net: NetName=GND_D Pin=J?-10
+Added Pin To Net: NetName=GND_D Pin=J?-11
+Added Pin To Net: NetName=GND_D Pin=J?-12
+Added Pin To Net: NetName=GND_D Pin=J?-13
+Added Pin To Net: NetName=GND_D Pin=J?-14
+Added Pin To Net: NetName=GND_D Pin=J?-15
+Added Pin To Net: NetName=GND_D Pin=J?-16
+Added Pin To Net: NetName=GND_D Pin=J?-17
+Added Pin To Net: NetName=GND_D Pin=J?-18
+Added Pin To Net: NetName=GND_D Pin=J?-19
+Added Pin To Net: NetName=GND_D Pin=J?-20
+Added Net: Name=GND_D
+Added Pin To Net: NetName=PUMP Pin=J?-4
+Added Net: Name=PUMP
+Added Pin To Net: NetName=RFI_STA Pin=J?-8
+Added Net: Name=RFI_STA
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component *? POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component *? POWER_SO_20
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component C? 50V 10uF
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component C? 25V 10uF
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component C? 50V 104
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component C? Cap vol
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? SS34
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? ES1B-E3/61T
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? 18V
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? V40PWM45C
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D? P6SMB18
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? 2.54-1*20P÷±’Î
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? 2.54-1*20P÷±’Î
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component J? SMT_Connector
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 1K
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 1K
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 10R
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 10R
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 1K
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 330R
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component R? 6.8R@Ipeak=167mA
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component U? AUIR3241S
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component VT? STB170NF04
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component VT? STB170NF04

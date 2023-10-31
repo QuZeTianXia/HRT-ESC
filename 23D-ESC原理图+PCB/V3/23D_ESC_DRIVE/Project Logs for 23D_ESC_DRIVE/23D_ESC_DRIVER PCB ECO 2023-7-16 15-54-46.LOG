@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=LSTB1_PWM Pin=3-7
+Removed Pin From Net: NetName=LSTB1_STA Pin=3-8
+Removed Pin From Net: NetName=LSTB1_OUT Pin=3-9
+Removed Pin From Net: NetName=RSTB1_PWM Pin=4-7
+Removed Pin From Net: NetName=RSTB1_STA Pin=4-8
+Removed Pin From Net: NetName=RSTB1_OUT Pin=4-9
+Removed Pin From Net: NetName=LSTB1_OUT Pin=D21-1
+Removed Pin From Net: NetName=RSTB1_OUT Pin=D24-1
+Added Pin To Net: NetName=RSTB1_PWM Pin=3-7
+Added Pin To Net: NetName=RSTB1_STA Pin=3-8
+Added Pin To Net: NetName=RSTB1_OUT Pin=3-9
+Added Pin To Net: NetName=LSTB1_PWM Pin=4-7
+Added Pin To Net: NetName=LSTB1_STA Pin=4-8
+Added Pin To Net: NetName=LSTB1_OUT Pin=4-9
+Added Pin To Net: NetName=RSTB1_OUT Pin=D21-1
+Added Pin To Net: NetName=LSTB1_OUT Pin=D24-1
+Added Member To Class: ClassName=23D_ESC_DRIVER Member=Component D24 120T3G
+Added Room: Name=23D_ESC_DRIVER

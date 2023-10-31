@@ -1,0 +1,10 @@
+Change Component Designator: OldDesignator=5 NewDesignator=2
+Change Component Designator: OldDesignator=6 NewDesignator=3
+Change Component Designator: OldDesignator=7 NewDesignator=1
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=U1 NewDesignator=U2
+Change Component Designator: OldDesignator=U2 NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U6
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component J2 2.54-1*20P÷±’Î
+Added Room: Name=23D_ESC_Controller

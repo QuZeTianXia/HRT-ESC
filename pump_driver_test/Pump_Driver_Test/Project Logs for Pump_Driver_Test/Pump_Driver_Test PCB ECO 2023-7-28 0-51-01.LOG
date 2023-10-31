@@ -1,0 +1,4 @@
+Added Component: Designator=D?(DO-214)
+Added Pin To Net: NetName=VCC Pin=D?-1
+Added Pin To Net: NetName=NetC1_2 Pin=D?-2
+Added Member To Class: ClassName=Pump_Driver_Test Member=Component D? ES1B-E3/61T

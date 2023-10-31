@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=KEY1 Pin=U1-8
+Removed Pin From Net: NetName=KEY2 Pin=U1-9
+Removed Pin From Net: NetName=KEY3 Pin=U1-10
+Removed Pin From Net: NetName=D0 Pin=U1-11
+Removed Pin From Net: NetName=D1 Pin=U1-12
+Removed Pin From Net: NetName=RES Pin=U1-13
+Removed Pin From Net: NetName=DC Pin=U1-14
+Removed Pin From Net: NetName=CS Pin=U1-15
+Added Pin To Net: NetName=CS Pin=U1-6
+Added Pin To Net: NetName=DC Pin=U1-7
+Added Pin To Net: NetName=RES Pin=U1-8
+Added Pin To Net: NetName=D1 Pin=U1-9
+Added Pin To Net: NetName=D0 Pin=U1-10
+Added Pin To Net: NetName=KEY1 Pin=U1-14
+Added Pin To Net: NetName=KEY2 Pin=U1-15
+Added Pin To Net: NetName=KEY3 Pin=U1-16
+Added Member To Class: ClassName=Pump_Driver_Test Member=Component R7 0R
+Added Room: Name=Pump_Driver_Test

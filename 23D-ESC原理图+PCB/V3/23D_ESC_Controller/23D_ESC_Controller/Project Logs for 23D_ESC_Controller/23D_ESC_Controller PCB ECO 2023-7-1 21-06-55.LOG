@@ -1,0 +1,24 @@
+Added Pin To Net: NetName=LBI Pin=1-4
+Added Pin To Net: NetName=LBO Pin=1-4
+Added Pin To Net: NetName=LFI Pin=1-4
+Added Pin To Net: NetName=LFO Pin=1-4
+Added Pin To Net: NetName=LSTB1 Pin=1-4
+Added Pin To Net: NetName=LSTB2 Pin=1-4
+Added Pin To Net: NetName=LTC Pin=1-4
+Added Pin To Net: NetName=RBI Pin=1-4
+Added Pin To Net: NetName=RBO Pin=1-4
+Added Pin To Net: NetName=RFI Pin=1-4
+Added Pin To Net: NetName=RTC Pin=1-4
+Added Pin To Net: NetName=L9349_ENABLE Pin=2-4
+Added Pin To Net: NetName=LBI_STA Pin=2-4
+Added Pin To Net: NetName=LBO_STA Pin=2-4
+Added Pin To Net: NetName=LFI_STA Pin=2-4
+Added Pin To Net: NetName=LFO_STA Pin=2-4
+Added Pin To Net: NetName=LSTB1_STA Pin=2-4
+Added Pin To Net: NetName=LSTB2_STA Pin=2-4
+Added Pin To Net: NetName=LTC_STA Pin=2-4
+Added Pin To Net: NetName=RBI_STA Pin=2-4
+Added Pin To Net: NetName=RBO_STA Pin=2-4
+Added Pin To Net: NetName=RFI_STA Pin=2-4
+Added Pin To Net: NetName=RTC_STA Pin=2-4
+Added Room: Name=23D_ESC_Controller

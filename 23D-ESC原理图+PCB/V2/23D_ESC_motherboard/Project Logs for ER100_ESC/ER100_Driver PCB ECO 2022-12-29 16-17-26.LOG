@@ -1,0 +1,85 @@
+Removed Pin From Net: NetName=L_STB1 Pin=C10-1
+Removed Pin From Net: NetName=P_GND Pin=C10-2
+Removed Pin From Net: NetName=P_GND Pin=C11-1
+Removed Pin From Net: NetName=R_STB2 Pin=C11-2
+Removed Pin From Net: NetName=L_STB2 Pin=C12-1
+Removed Pin From Net: NetName=P_GND Pin=C12-2
+Removed Pin From Net: NetName=P_GND Pin=C13-1
+Removed Pin From Net: NetName=R_STB1 Pin=C13-2
+Removed Pin From Net: NetName=RB_OUP Pin=C14-1
+Removed Pin From Net: NetName=P_GND Pin=C14-2
+Removed Pin From Net: NetName=P_GND Pin=C15-1
+Removed Pin From Net: NetName=LB_OUP Pin=C15-2
+Removed Pin From Net: NetName=LF_OUP Pin=C16-1
+Removed Pin From Net: NetName=P_GND Pin=C16-2
+Removed Pin From Net: NetName=P_GND Pin=C17-1
+Removed Pin From Net: NetName=RF_OUP Pin=C17-2
+Removed Pin From Net: NetName=L_TC Pin=C18-1
+Removed Pin From Net: NetName=P_GND Pin=C18-2
+Removed Pin From Net: NetName=P_GND Pin=C19-1
+Removed Pin From Net: NetName=R_TC Pin=C19-2
+Removed Pin From Net: NetName=LF_INP Pin=C20-1
+Removed Pin From Net: NetName=P_GND Pin=C20-2
+Removed Pin From Net: NetName=RB_INP Pin=C21-1
+Removed Pin From Net: NetName=P_GND Pin=C21-2
+Removed Pin From Net: NetName=LB_INP Pin=C22-1
+Removed Pin From Net: NetName=P_GND Pin=C22-2
+Removed Pin From Net: NetName=RF_INP Pin=C23-1
+Removed Pin From Net: NetName=P_GND Pin=C23-2
+Removed Pin From Net: NetName=L_STB1 Pin=D7-1
+Removed Pin From Net: NetName=VALVES+ Pin=D7-2
+Removed Pin From Net: NetName=R_STB2 Pin=D8-1
+Removed Pin From Net: NetName=VALVES+ Pin=D8-2
+Removed Pin From Net: NetName=R_STB1 Pin=D9-1
+Removed Pin From Net: NetName=VALVES+ Pin=D9-2
+Removed Pin From Net: NetName=L_STB2 Pin=D10-1
+Removed Pin From Net: NetName=VALVES+ Pin=D10-2
+Removed Pin From Net: NetName=RF_OUP Pin=D11-1
+Removed Pin From Net: NetName=VALVES+ Pin=D11-2
+Removed Pin From Net: NetName=L_TC Pin=D12-1
+Removed Pin From Net: NetName=VALVES+ Pin=D12-2
+Removed Pin From Net: NetName=R_TC Pin=D13-1
+Removed Pin From Net: NetName=VALVES+ Pin=D13-2
+Removed Pin From Net: NetName=LB_OUP Pin=U5-2
+Removed Pin From Net: NetName=RB_OUP Pin=U5-3
+Removed Pin From Net: NetName=L_STB2 Pin=U5-4
+Removed Pin From Net: NetName=L_STB1 Pin=U5-5
+Removed Pin From Net: NetName=VALVES+ Pin=U5-7
+Removed Pin From Net: NetName=VALVES+ Pin=U5-9
+Removed Pin From Net: NetName=P_GND Pin=U5-10
+Removed Pin From Net: NetName=VALVES+ Pin=U5-11
+Removed Pin From Net: NetName=R_STB1 Pin=U5-18
+Removed Pin From Net: NetName=VALVES+ Pin=U5-19
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C10
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C11
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C12
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C13
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C14
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C15
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C16
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C17
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C18
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C19
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C20
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C21
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C22
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=C23
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D7
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D8
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D9
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D10
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D11
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D12
+Removed Member From Class: ClassName=HRT_D ER100 V1.0 Member=D13
+Added Pin To Net: NetName=P_GND Pin=U5-2
+Added Pin To Net: NetName=LB_OUP Pin=U5-3
+Added Pin To Net: NetName=RB_OUP Pin=U5-4
+Added Pin To Net: NetName=VALVES+ Pin=U5-5
+Added Pin To Net: NetName=L_STB2 Pin=U5-7
+Added Pin To Net: NetName=L_STB1 Pin=U5-9
+Added Pin To Net: NetName=VALVES+ Pin=U5-10
+Added Pin To Net: NetName=VALVES+ Pin=U5-12
+Added Pin To Net: NetName=VALVES+ Pin=U5-18
+Added Pin To Net: NetName=R_STB1 Pin=U5-19
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component U5 MX34_28
+Added Room: Name=HRT_D ER100 V1.0

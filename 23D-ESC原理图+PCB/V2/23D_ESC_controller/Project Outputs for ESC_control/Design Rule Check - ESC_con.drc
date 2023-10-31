@@ -1,0 +1,53 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\lenovo\Desktop\23D_ESC_controller\ESC_con.PcbDoc
+Date     : 2022/12/21
+Time     : 20:42:53
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=25mil) (InPoly),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint: (125.984mil > 100mil) Pad P1-13(1090mil,3135mil) on Multi-Layer Actual Hole Size = 125.984mil
+   Violation between Hole Size Constraint: (125.984mil > 100mil) Pad P1-14(1090mil,3650.748mil) on Multi-Layer Actual Hole Size = 125.984mil
+Rule Violations :2
+
+Processing Rule : Hole To Hole Clearance (Gap=2mil) (All),(All)
+   Violation between Hole To Hole Clearance Constraint: (Collision < 2mil) Between Pad P1-12(1318.347mil,3197.992mil) on Multi-Layer And Pad P1-12(1318.347mil,3197.992mil) on Multi-Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 2mil) Between Pad P1-6(1456.142mil,3154.685mil) on Multi-Layer And Pad P1-6(1456.142mil,3154.685mil) on Multi-Layer Pad/Via Touching Holes
+Rule Violations :2
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=2mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=2mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=2mil) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (Collision < 2mil) Between Text "CAN_H" (2260mil,3030mil) on Top Overlay And Text "1756.142,3062.992 (mil)" (1766.142mil,3062.992mil) on Top Overlay Silk Text to Silk Clearance [0mil]
+Rule Violations :1
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Via (2020mil,2400mil) from Top Layer to Bottom Layer 
+Rule Violations :1
+
+
+Violations Detected : 6
+Time Elapsed        : 00:00:01

@@ -1,0 +1,71 @@
+Protel Design System Design Rule Check
+PCB File : D:\技术文件\HRT\ESC\pump_driver_test\Pump_Driver_Test\Pump_Driver_Test.PcbDoc
+Date     : 2023/8/5
+Time     : 9:45:59
+
+Processing Rule : Clearance Constraint (Gap=25mil) (InPoly),(All)
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=1mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (3.801mil < 10mil) Between Arc (5262.5mil,3042.5mil) on Top Solder And Arc (5177.5mil,3137.5mil) on Top Solder [Top Solder] Mask Sliver [3.801mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.344mil < 10mil) Between Arc (5200mil,3125mil) on Top Solder And Arc (5177.5mil,3137.5mil) on Top Solder [Top Solder] Mask Sliver [0.344mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (8.343mil < 10mil) Between Arc (5285mil,3020mil) on Top Solder And Arc (5177.5mil,3137.5mil) on Top Solder [Top Solder] Mask Sliver [8.343mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (5.169mil < 10mil) Between Arc (5205mil,3105mil) on Top Solder And Arc (5172.5mil,3157.5mil) on Top Solder [Top Solder] Mask Sliver [5.169mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (9.112mil < 10mil) Between Area Fill (5025mil,3260mil) (5820mil,3460mil) on Top Solder And Arc (5172.5mil,3157.5mil) on Top Solder [Top Solder] Mask Sliver [9.112mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.178mil < 10mil) Between Area Fill (5025mil,3185mil) (5070mil,3220mil) on Top Solder And Arc (5200mil,3125mil) on Top Solder [Top Solder] Mask Sliver [3.178mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.563mil < 10mil) Between Arc (5292.5mil,3017.5mil) on Top Solder And Arc (5220mil,3095mil) on Top Solder [Top Solder] Mask Sliver [0.563mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.517mil < 10mil) Between Arc (5285mil,3020mil) on Top Solder And Arc (5205mil,3105mil) on Top Solder [Top Solder] Mask Sliver [0.517mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.801mil < 10mil) Between Arc (5292.5mil,3017.5mil) on Top Solder And Arc (5205mil,3105mil) on Top Solder [Top Solder] Mask Sliver [3.801mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (9.532mil < 10mil) Between Area Fill (5025mil,3185mil) (5070mil,3220mil) on Top Solder And Arc (5262.5mil,3042.5mil) on Top Solder [Top Solder] Mask Sliver [9.532mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (5.186mil < 10mil) Between Arc (4770mil,2695mil) on Top Solder And Arc (4832.5mil,2647.5mil) on Top Solder [Top Solder] Mask Sliver [5.186mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.789mil < 10mil) Between Arc (4742.5mil,2717.5mil) on Top Solder And Arc (4805mil,2665mil) on Top Solder [Top Solder] Mask Sliver [3.789mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (5.991mil < 10mil) Between Arc (4742.5mil,2717.5mil) on Top Solder And Arc (4812.5mil,2642.5mil) on Top Solder [Top Solder] Mask Sliver [5.991mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (9.647mil < 10mil) Between Arc (4685mil,2775mil) on Top Solder And Arc (4790mil,2670mil) on Top Solder [Top Solder] Mask Sliver [9.647mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.993mil < 10mil) Between Arc (4695mil,2770mil) on Top Solder And Arc (4790mil,2670mil) on Top Solder [Top Solder] Mask Sliver [3.993mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (8.335mil < 10mil) Between Arc (4685mil,2775mil) on Top Solder And Arc (4770mil,2695mil) on Top Solder [Top Solder] Mask Sliver [8.335mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (2.733mil < 10mil) Between Arc (4695mil,2770mil) on Top Solder And Arc (4770mil,2695mil) on Top Solder [Top Solder] Mask Sliver [2.733mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (2.017mil < 10mil) Between Arc (4685mil,2775mil) on Top Solder And Arc (4755mil,2710mil) on Top Solder [Top Solder] Mask Sliver [2.017mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (8.263mil < 10mil) Between Arc (4662.5mil,2797.5mil) on Top Solder And Arc (4755mil,2710mil) on Top Solder [Top Solder] Mask Sliver [8.263mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (1.895mil < 10mil) Between Arc (4662.5mil,2797.5mil) on Top Solder And Arc (4742.5mil,2717.5mil) on Top Solder [Top Solder] Mask Sliver [1.895mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (2mil < 10mil) Between Via (2775mil,3695mil) from Top Layer to Bottom Layer And Pad C6-2(2775mil,3645mil) on Top Layer [Top Solder] Mask Sliver [2mil]
+Rule Violations :21
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=100mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=20mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 21
+Time Elapsed        : 00:00:01

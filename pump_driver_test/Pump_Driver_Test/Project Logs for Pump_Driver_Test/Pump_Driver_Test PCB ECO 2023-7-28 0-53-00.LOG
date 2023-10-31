@@ -1,0 +1,19 @@
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Added Component: Designator=R1(R 0805)
+Added Component: Designator=R5(R 0805)
+Added Component: Designator=U2(SOP8)
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR2_2 Pin=U2-1
+Added Pin To Net: NetName=NetR3_2 Pin=U2-2
+Added Pin To Net: NetName=P_GND Pin=U2-3
+Added Pin To Net: NetName=NetR5_1 Pin=U2-4
+Added Pin To Net: NetName=VCC Pin=U2-5
+Added Pin To Net: NetName=MOTOR+ Pin=U2-6
+Added Pin To Net: NetName=NetR1_1 Pin=U2-7
+Added Pin To Net: NetName=NetC1_2 Pin=U2-8
+Added Member To Class: ClassName=Pump_Driver_Test Member=Component R1 10R
+Added Member To Class: ClassName=Pump_Driver_Test Member=Component R5 10R
+Added Member To Class: ClassName=Pump_Driver_Test Member=Component U2 IR2184

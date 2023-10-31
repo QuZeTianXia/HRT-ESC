@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=LFI_OUT Pin=1-2
+Removed Pin From Net: NetName=LFI_STA Pin=1-3
+Removed Pin From Net: NetName=LFI_PWM Pin=1-4
+Removed Pin From Net: NetName=RTC_OUT Pin=3-2
+Removed Pin From Net: NetName=RTC_STA Pin=3-3
+Removed Pin From Net: NetName=RTC_PWM Pin=3-4
+Removed Pin From Net: NetName=LTC_PWM Pin=3-17
+Removed Pin From Net: NetName=LTC_STA Pin=3-18
+Removed Pin From Net: NetName=LTC_OUT Pin=3-19
+Removed Pin From Net: NetName=LFI_OUT Pin=D8-1
+Removed Pin From Net: NetName=RTC_OUT Pin=D17-1
+Removed Pin From Net: NetName=LTC_OUT Pin=D18-1
+Added Pin To Net: NetName=RTC_OUT Pin=1-2
+Added Pin To Net: NetName=RTC_STA Pin=1-3
+Added Pin To Net: NetName=RTC_PWM Pin=1-4
+Added Pin To Net: NetName=LTC_OUT Pin=3-2
+Added Pin To Net: NetName=LTC_STA Pin=3-3
+Added Pin To Net: NetName=LTC_PWM Pin=3-4
+Added Pin To Net: NetName=LFI_PWM Pin=3-17
+Added Pin To Net: NetName=LFI_STA Pin=3-18
+Added Pin To Net: NetName=LFI_OUT Pin=3-19
+Added Pin To Net: NetName=RTC_OUT Pin=D8-1
+Added Pin To Net: NetName=LTC_OUT Pin=D17-1
+Added Pin To Net: NetName=LFI_OUT Pin=D18-1
+Added Room: Name=23D_ESC_DRIVER

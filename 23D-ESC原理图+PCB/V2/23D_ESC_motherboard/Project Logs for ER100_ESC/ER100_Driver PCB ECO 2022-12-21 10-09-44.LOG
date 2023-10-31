@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=R_STB2 Pin=U5-7
+Removed Pin From Net: NetName=VALVES+ Pin=U5-17
+Added Pin To Net: NetName=VALVES+ Pin=U5-7
+Added Pin To Net: NetName=R_STB2 Pin=U5-17
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component U5 MX34_28
+Added Room: Name=HRT_D ER100 V1.0

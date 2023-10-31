@@ -1,0 +1,79 @@
+Change Component Comment : Designator=C29 Old Comment=10uF New Comment=2.2uF
+Change Component Comment : Designator=C30 Old Comment=10uF New Comment=2.2uF
+Added Component: Designator=C24(C 0805)
+Added Component: Designator=C25(C 0805)
+Added Component: Designator=C26(C 0805)
+Added Component: Designator=C27(C 0805)
+Added Component: Designator=C28(C 0805)
+Added Component: Designator=C31(C 0805)
+Added Component: Designator=C32(C 0805)
+Added Component: Designator=C33(C 0805)
+Added Component: Designator=C34(C 0805)
+Added Component: Designator=C35(C 0805)
+Added Component: Designator=C36(C 0805)
+Added Component: Designator=C37(C 0805)
+Added Component: Designator=D14(DO-214)
+Added Component: Designator=D15(DO-214)
+Added Component: Designator=D16(DO-214)
+Added Component: Designator=D17(DO-214)
+Added Component: Designator=D18(DO-214)
+Added Component: Designator=D19(DO-214)
+Added Component: Designator=D20(DO-214)
+Added Pin To Net: NetName=LF_INP Pin=C24-1
+Added Pin To Net: NetName=P_GND Pin=C24-2
+Added Pin To Net: NetName=LB_INP Pin=C25-1
+Added Pin To Net: NetName=P_GND Pin=C25-2
+Added Pin To Net: NetName=RF_INP Pin=C26-1
+Added Pin To Net: NetName=P_GND Pin=C26-2
+Added Pin To Net: NetName=P_GND Pin=C27-1
+Added Pin To Net: NetName=RB_INP Pin=C27-2
+Added Pin To Net: NetName=P_GND Pin=C28-1
+Added Pin To Net: NetName=LF_OUP Pin=C28-2
+Added Pin To Net: NetName=P_GND Pin=C31-1
+Added Pin To Net: NetName=L_TC Pin=C31-2
+Added Pin To Net: NetName=P_GND Pin=C32-1
+Added Pin To Net: NetName=L_STB1 Pin=C32-2
+Added Pin To Net: NetName=P_GND Pin=C33-1
+Added Pin To Net: NetName=L_STB2 Pin=C33-2
+Added Pin To Net: NetName=R_TC Pin=C34-1
+Added Pin To Net: NetName=P_GND Pin=C34-2
+Added Pin To Net: NetName=RF_OUP Pin=C35-1
+Added Pin To Net: NetName=P_GND Pin=C35-2
+Added Pin To Net: NetName=R_STB2 Pin=C36-1
+Added Pin To Net: NetName=P_GND Pin=C36-2
+Added Pin To Net: NetName=R_STB1 Pin=C37-1
+Added Pin To Net: NetName=P_GND Pin=C37-2
+Added Pin To Net: NetName=L_TC Pin=D14-1
+Added Pin To Net: NetName=VALVES+ Pin=D14-2
+Added Pin To Net: NetName=L_STB1 Pin=D15-1
+Added Pin To Net: NetName=VALVES+ Pin=D15-2
+Added Pin To Net: NetName=L_STB2 Pin=D16-1
+Added Pin To Net: NetName=VALVES+ Pin=D16-2
+Added Pin To Net: NetName=R_TC Pin=D17-1
+Added Pin To Net: NetName=VALVES+ Pin=D17-2
+Added Pin To Net: NetName=RF_OUP Pin=D18-1
+Added Pin To Net: NetName=VALVES+ Pin=D18-2
+Added Pin To Net: NetName=R_STB2 Pin=D19-1
+Added Pin To Net: NetName=VALVES+ Pin=D19-2
+Added Pin To Net: NetName=R_STB1 Pin=D20-1
+Added Pin To Net: NetName=VALVES+ Pin=D20-2
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C24 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C25 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C26 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C27 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C28 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C31 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C32 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C33 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C34 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C35 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C36 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component C37 2.2uF
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D14 120T3G
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D15 120T3G
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D16 120T3G
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D17 120T3G
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D18 120T3G
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D19 120T3G
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D20 120T3G
+Added Room: Name=HRT_D ER100 V1.0

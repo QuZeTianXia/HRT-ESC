@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VCC_5V Pin=*-4
+Added Pin To Net: NetName=GND_D Pin=*-4
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * еед╦1*6
+Added Room: Name=23D_ESC_Controller

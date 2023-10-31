@@ -1,0 +1,274 @@
+Removed Pin From Net: NetName=VCC_5V Pin=C?-1
+Removed Pin From Net: NetName=VCC_5V Pin=C?-2
+Removed Pin From Net: NetName=NetR?_1 Pin=R?-1
+Removed Pin From Net: NetName=GND_D Pin=U?-1
+Removed Pin From Net: NetName=VCC_3V3 Pin=U?-2
+Removed Pin From Net: NetName=VCC_5V Pin=U?-3
+Added Component: Designator=*(HDR2.54-LI-20P)
+Added Component: Designator=*(HDR2.54-LI-20P)
+Added Component: Designator=*(HDR2.54-LI-20P)
+Added Component: Designator=*(HDR2.54-LI-4P)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(C 0805)
+Added Component: Designator=C?(CD B(3528))
+Added Component: Designator=C?(CD B(3528))
+Added Component: Designator=GL?(COMM-TH_7P-L19.9-W17.5-P2.54)
+Added Component: Designator=K?(KEY 3.6*2.5 SMD)
+Added Component: Designator=K?(KEY 3.6*2.5 SMD)
+Added Component: Designator=K?(KEY 3.6*2.5 SMD)
+Added Component: Designator=P?(JAE_MX34_2.2_12)
+Added Component: Designator=Q?(SOT23-3)
+Added Component: Designator=Q?(SOT23-3)
+Added Component: Designator=Q?(SOT23-3)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=R?(R 0805)
+Added Component: Designator=U?(SOP8)
+Added Component: Designator=U?(74hc74)
+Added Component: Designator=U?(74hc74)
+Added Component: Designator=U?(SSOP20)
+Added Component: Designator=U?(SSOP20)
+Added Component: Designator=U?(SOT223)
+Added Pin To Net: NetName=GND_D Pin=*-1
+Added Pin To Net: NetName=VCC_3V3 Pin=*-2
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=GND_D Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_3V3 Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=VCC_5V Pin=C?-1
+Added Pin To Net: NetName=ANL_REF Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=RESET Pin=C?-2
+Added Pin To Net: NetName=VCC_5V Pin=C?-2
+Added Pin To Net: NetName=VCC_5V Pin=C?-2
+Added Pin To Net: NetName=GND_D Pin=K?-1
+Added Pin To Net: NetName=GND_D Pin=K?-1
+Added Pin To Net: NetName=GND_D Pin=K?-1
+Added Pin To Net: NetName=PUMP Pin=Q?-2
+Added Pin To Net: NetName=VCC_5V Pin=Q?-3
+Added Pin To Net: NetName=VCC_5V Pin=Q?-3
+Added Pin To Net: NetName=VCC_5V Pin=Q?-3
+Added Pin To Net: NetName=LED1 Pin=R?-1
+Added Pin To Net: NetName=LED2 Pin=R?-1
+Added Pin To Net: NetName=NetR?_1 Pin=R?-1
+Added Pin To Net: NetName=PUMP Pin=R?-1
+Added Pin To Net: NetName=GND_D Pin=R?-2
+Added Pin To Net: NetName=GND_D Pin=R?-2
+Added Pin To Net: NetName=GND_D Pin=R?-2
+Added Pin To Net: NetName=GND_D Pin=R?-2
+Added Pin To Net: NetName=GND_D Pin=R?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R?-2
+Added Pin To Net: NetName=CAN_TX Pin=U?-1
+Added Pin To Net: NetName=GND_D Pin=U?-1
+Added Pin To Net: NetName=GND_D Pin=U?-1
+Added Pin To Net: NetName=GND_D Pin=U?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-2
+Added Pin To Net: NetName=VCC_3V3 Pin=U?-2
+Added Pin To Net: NetName=VCC_5V Pin=U?-3
+Added Pin To Net: NetName=VCC_5V Pin=U?-3
+Added Pin To Net: NetName=CAN_RX Pin=U?-4
+Added Pin To Net: NetName=GND_D Pin=U?-8
+Added Pin To Net: NetName=GND_D Pin=U?-10
+Added Pin To Net: NetName=GND_D Pin=U?-10
+Added Pin To Net: NetName=GND_D Pin=U?-19
+Added Pin To Net: NetName=GND_D Pin=U?-19
+Added Pin To Net: NetName=VCC_5V Pin=U?-20
+Added Pin To Net: NetName=VCC_5V Pin=U?-20
+Added Pin To Net: NetName=CAN_H Pin=C?-2
+Added Pin To Net: NetName=CAN_H Pin=R?-1
+Added Pin To Net: NetName=CAN_H Pin=R?-2
+Added Pin To Net: NetName=CAN_H Pin=U?-7
+Added Net: Name=CAN_H
+Added Pin To Net: NetName=CAN_IN_L Pin=C?-1
+Added Pin To Net: NetName=CAN_IN_L Pin=R?-1
+Added Pin To Net: NetName=CAN_IN_L Pin=R?-2
+Added Pin To Net: NetName=CAN_IN_L Pin=U?-6
+Added Net: Name=CAN_IN_L
+Added Pin To Net: NetName=CS Pin=*-7
+Added Net: Name=CS
+Added Pin To Net: NetName=D0 Pin=*-3
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=*-4
+Added Net: Name=D1
+Added Pin To Net: NetName=DC Pin=*-6
+Added Net: Name=DC
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Net: Name=GND
+Added Pin To Net: NetName=KEY1 Pin=C?-1
+Added Pin To Net: NetName=KEY1 Pin=K?-2
+Added Pin To Net: NetName=KEY1 Pin=R?-1
+Added Net: Name=KEY1
+Added Pin To Net: NetName=KEY2 Pin=C?-1
+Added Pin To Net: NetName=KEY2 Pin=K?-2
+Added Pin To Net: NetName=KEY2 Pin=R?-1
+Added Net: Name=KEY2
+Added Pin To Net: NetName=KEY3 Pin=C?-1
+Added Pin To Net: NetName=KEY3 Pin=K?-2
+Added Pin To Net: NetName=KEY3 Pin=R?-1
+Added Net: Name=KEY3
+Added Pin To Net: NetName=L9349_EN Pin=Q?-1
+Added Net: Name=L9349_EN
+Added Pin To Net: NetName=L9349 Pin=Q?-2
+Added Pin To Net: NetName=L9349 Pin=R?-1
+Added Net: Name=L9349
+Added Pin To Net: NetName=LED3 Pin=R?-1
+Added Net: Name=LED3
+Added Pin To Net: NetName=NetR?_2 Pin=R?-2
+Added Pin To Net: NetName=NetR?_2 Pin=U?-3
+Added Net: Name=NetR?_2
+Added Pin To Net: NetName=PUMP_EN Pin=Q?-1
+Added Net: Name=PUMP_EN
+Added Pin To Net: NetName=RES Pin=*-5
+Added Net: Name=RES
+Added Pin To Net: NetName=USART1_RX Pin=*-2
+Added Net: Name=USART1_RX
+Added Pin To Net: NetName=USART1_TX Pin=*-1
+Added Net: Name=USART1_TX
+Added Pin To Net: NetName=USART2_RX Pin=*-4
+Added Net: Name=USART2_RX
+Added Pin To Net: NetName=USART2_TX Pin=*-3
+Added Net: Name=USART2_TX
+Added Pin To Net: NetName=VALVES_EN Pin=Q?-1
+Added Net: Name=VALVES_EN
+Added Pin To Net: NetName=VALVES Pin=Q?-2
+Added Pin To Net: NetName=VALVES Pin=R?-1
+Added Net: Name=VALVES
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * ÅÅÕë1*20
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * ÅÅÕë1*20
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * ÅÅÕë1*4
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * SWD
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component * OLEDÆÁ
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 10uF
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 10uF
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 104
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 22pf
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 22pf
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 22pf
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component C? 22pf
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component D? ORANGE
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component D? P6SMB18
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component GL? CTM1051KT
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component K? Key
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component K? Key
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component K? Key
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component P? JAE_MX340_12
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component Q? Model
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component Q? Model
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component Q? Model
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 1.3K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 1.3K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 120R
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 3.3K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 3.3K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 3.3K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10k
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10k
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10k
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10k
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10k
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component R? 10K
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? TJA1040T
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? HC7421D
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? 74HC244
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? 74HC244
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? AMS1117-XX
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? DM02-XX
+Added Member To Class: ClassName=23D_ESC_Controller Member=Component U? STM32F103VET6
+Added Room: Name=23D_ESC_Controller

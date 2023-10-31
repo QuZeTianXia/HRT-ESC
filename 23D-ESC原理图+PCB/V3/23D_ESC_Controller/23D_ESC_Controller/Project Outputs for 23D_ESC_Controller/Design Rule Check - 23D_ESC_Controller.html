@@ -1,0 +1,522 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\%E8%BD%AF%E4%BB%B6\AD16save\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2023/7/7</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">16:52:34</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc" class="file"><acronym title="D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc">D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">62</td></tr>
+</table>
+</td>
+</table><a name="IDMUPJALDKZFGWB3XA54TP1TNSDEHKNEBY3KL02AMHIU21BPL22NFB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDK03HT4VBHUTCBCRFXTPYBQXP2MSM4MXT0PEZXFC4XXD2VR2323LG">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDL1UVSFPAJQRXCG55EW3FORGRZMMNDUUMBPVXRYPV1X2IUWMX5EEL">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDISAKPCFO0BEGEP5PCTR4FU5CMNP0TMGMEZEFBPD2CQWSHPGNZV3K">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFZMGHVOMPVCFJTLM0B5KZBXERKT2P40KHE4DTZM2GHRT3LVIYMAB">Silk To Solder Mask (Clearance=0.051mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0LOOO2YGVYK2OEYA0L2IFPFQALU4EW3O31MXMMCPCEA2RXC0GLVF">Minimum Solder Mask Sliver (Gap=0.127mm) (All),(All)</a></td>
+<td class="column2">60</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVAIQ34A3VRHJGISHBAQT0YTP1J0DF2WAWTTI4WCUXUQHQH1SUNNF">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPTK1ZVLRZN2HDUZRAAW2ITDFFFJWB2TEM055RQBMSU5YJGR03XJE">Hole Size Constraint (Min=0.025mm) (Max=5.08mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3IWNYGMRFPINHNSJ2XWW2BCZYOAVMCGZQBWLY3LJPANCKZ2CGGRM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVD2LV0MVRVFLMJR4EENWPHFZ3SLJQBLH0DZERPZHV2KMDGU1RDK">Width Constraint (Min=0.254mm) (Max=1.27mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPBNFX0S4Z3GHJQ4J4K5XKOEB4BMCSY4NHBRFAVL0AFK30TKIAEVF">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5K4HXF2VF4AXGZ2DUG52HGPWIFIR22C5AJ5MR4EFPLL1SAPYETEN">Clearance Constraint (Gap=0.178mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAWPA4AV5CJZ2DQEN0MH3ZEBCKPP3M1Y4L0PFLANO2GU4ZOJDXPAL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSE2DEIZNVDWDFM0EL24NOTDXMFRL1O2CJLM5GVNREYJDXANQDLPL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDR4XIMVSKBH4FDIA05VDT5ZLCFMJVJDM3D20AL5PNUNNB3STXBID">Clearance Constraint (Gap=0.635mm) (InPoly),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">62</td>
+</tr>
+</table><br><a name="ID0LOOO2YGVYK2OEYA0L2IFPFQALU4EW3O31MXMMCPCEA2RXC0GLVF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.127mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-12(48.989mm,51.192mm) on Top Layer And Pad U4-11(48.989mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-13(48.989mm,51.842mm) on Top Layer And Pad U4-12(48.989mm,51.192mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-14(48.989mm,52.492mm) on Top Layer And Pad U4-13(48.989mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-15(48.989mm,53.142mm) on Top Layer And Pad U4-14(48.989mm,52.492mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-16(48.989mm,53.792mm) on Top Layer And Pad U4-15(48.989mm,53.142mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-17(48.989mm,54.442mm) on Top Layer And Pad U4-16(48.989mm,53.792mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-18(48.989mm,55.092mm) on Top Layer And Pad U4-17(48.989mm,54.442mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-19(48.989mm,55.742mm) on Top Layer And Pad U4-18(48.989mm,55.092mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1899.988mil|Location2.X=1906.238mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-20(48.989mm,56.392mm) on Top Layer And Pad U4-19(48.989mm,55.742mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-9(41.689mm,51.192mm) on Top Layer And Pad U4-10(41.689mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-8(41.689mm,51.842mm) on Top Layer And Pad U4-9(41.689mm,51.192mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-7(41.689mm,52.492mm) on Top Layer And Pad U4-8(41.689mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-6(41.689mm,53.142mm) on Top Layer And Pad U4-7(41.689mm,52.492mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-5(41.689mm,53.792mm) on Top Layer And Pad U4-6(41.689mm,53.142mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-4(41.689mm,54.442mm) on Top Layer And Pad U4-5(41.689mm,53.792mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-3(41.689mm,55.092mm) on Top Layer And Pad U4-4(41.689mm,54.442mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-2(41.689mm,55.742mm) on Top Layer And Pad U4-3(41.689mm,55.092mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1612.587mil|Location2.X=1618.837mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U4-1(41.689mm,56.392mm) on Top Layer And Pad U4-2(41.689mm,55.742mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1599.786mil|Location2.X=1606.036mil|Location1.Y=2216.875mil|Location2.Y=2223.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1599.786mil|Location2.X=1606.036mil|Location1.Y=2216.875mil|Location2.Y=2223.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Via (40.259mm,56.388mm) from Top Layer to Bottom Layer And Pad U4-1(41.689mm,56.392mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-12(76.802mm,51.192mm) on Top Layer And Pad U3-11(76.802mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-13(76.802mm,51.842mm) on Top Layer And Pad U3-12(76.802mm,51.192mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-14(76.802mm,52.492mm) on Top Layer And Pad U3-13(76.802mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-15(76.802mm,53.142mm) on Top Layer And Pad U3-14(76.802mm,52.492mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-16(76.802mm,53.792mm) on Top Layer And Pad U3-15(76.802mm,53.142mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-17(76.802mm,54.442mm) on Top Layer And Pad U3-16(76.802mm,53.792mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-18(76.802mm,55.092mm) on Top Layer And Pad U3-17(76.802mm,54.442mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-19(76.802mm,55.742mm) on Top Layer And Pad U3-18(76.802mm,55.092mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2994.988mil|Location2.X=3001.238mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-20(76.802mm,56.392mm) on Top Layer And Pad U3-19(76.802mm,55.742mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-9(69.502mm,51.192mm) on Top Layer And Pad U3-10(69.502mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-8(69.502mm,51.842mm) on Top Layer And Pad U3-9(69.502mm,51.192mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2694.285mil|Location2.X=2700.535mil|Location1.Y=2037.457mil|Location2.Y=2043.707mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2694.285mil|Location2.X=2700.535mil|Location1.Y=2037.457mil|Location2.Y=2043.707mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.123mm &lt; 0.127mm) Between Via (68.072mm,51.816mm) from Top Layer to Bottom Layer And Pad U3-8(69.502mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.123mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-7(69.502mm,52.492mm) on Top Layer And Pad U3-8(69.502mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-6(69.502mm,53.142mm) on Top Layer And Pad U3-7(69.502mm,52.492mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-5(69.502mm,53.792mm) on Top Layer And Pad U3-6(69.502mm,53.142mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-4(69.502mm,54.442mm) on Top Layer And Pad U3-5(69.502mm,53.792mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-3(69.502mm,55.092mm) on Top Layer And Pad U3-4(69.502mm,54.442mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-2(69.502mm,55.742mm) on Top Layer And Pad U3-3(69.502mm,55.092mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2707.587mil|Location2.X=2713.837mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U3-1(69.502mm,56.392mm) on Top Layer And Pad U3-2(69.502mm,55.742mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2761.875mil|Location2.X=2768.125mil|Location1.Y=2229.4mil|Location2.Y=2235.65mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2761.875mil|Location2.X=2768.125mil|Location1.Y=2229.4mil|Location2.Y=2235.65mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.075mm &lt; 0.127mm) Between Via (70.231mm,57.15mm) from Top Layer to Bottom Layer And Pad U3-1(69.502mm,56.392mm) on Top Layer [Top Solder] Mask Sliver [0.075mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-12(63.086mm,51.192mm) on Top Layer And Pad U2-11(63.086mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-13(63.086mm,51.842mm) on Top Layer And Pad U2-12(63.086mm,51.192mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-14(63.086mm,52.492mm) on Top Layer And Pad U2-13(63.086mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-15(63.086mm,53.142mm) on Top Layer And Pad U2-14(63.086mm,52.492mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-16(63.086mm,53.792mm) on Top Layer And Pad U2-15(63.086mm,53.142mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-17(63.086mm,54.442mm) on Top Layer And Pad U2-16(63.086mm,53.792mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-18(63.086mm,55.092mm) on Top Layer And Pad U2-17(63.086mm,54.442mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-19(63.086mm,55.742mm) on Top Layer And Pad U2-18(63.086mm,55.092mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2454.988mil|Location2.X=2461.238mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-20(63.086mm,56.392mm) on Top Layer And Pad U2-19(63.086mm,55.742mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2518.967mil|Location2.X=2525.217mil|Location1.Y=2216.969mil|Location2.Y=2223.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2518.967mil|Location2.X=2525.217mil|Location1.Y=2216.969mil|Location2.Y=2223.219mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Via (64.516mm,56.388mm) from Top Layer to Bottom Layer And Pad U2-20(63.086mm,56.392mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2154.786mil|Location2.X=2161.036mil|Location1.Y=1986.785mil|Location2.Y=1993.035mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2154.786mil|Location2.X=2161.036mil|Location1.Y=1986.785mil|Location2.Y=1993.035mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Via (54.356mm,50.546mm) from Top Layer to Bottom Layer And Pad U2-10(55.786mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=1999.516mil|Location2.Y=2005.766mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-9(55.786mm,51.192mm) on Top Layer And Pad U2-10(55.786mm,50.542mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2025.106mil|Location2.Y=2031.356mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-8(55.786mm,51.842mm) on Top Layer And Pad U2-9(55.786mm,51.192mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2155.299mil|Location2.X=2161.549mil|Location1.Y=2037.902mil|Location2.Y=2044.152mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2155.299mil|Location2.X=2161.549mil|Location1.Y=2037.902mil|Location2.Y=2044.152mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.071mm &lt; 0.127mm) Between Via (54.382mm,51.842mm) from Top Layer to Bottom Layer And Pad U2-8(55.786mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.071mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2050.697mil|Location2.Y=2056.947mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-7(55.786mm,52.492mm) on Top Layer And Pad U2-8(55.786mm,51.842mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2076.288mil|Location2.Y=2082.538mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-6(55.786mm,53.142mm) on Top Layer And Pad U2-7(55.786mm,52.492mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2101.878mil|Location2.Y=2108.128mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-5(55.786mm,53.792mm) on Top Layer And Pad U2-6(55.786mm,53.142mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2127.469mil|Location2.Y=2133.719mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-4(55.786mm,54.442mm) on Top Layer And Pad U2-5(55.786mm,53.792mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2153.059mil|Location2.Y=2159.309mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-3(55.786mm,55.092mm) on Top Layer And Pad U2-4(55.786mm,54.442mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2178.65mil|Location2.Y=2184.9mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-2(55.786mm,55.742mm) on Top Layer And Pad U2-3(55.786mm,55.092mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2167.587mil|Location2.X=2173.837mil|Location1.Y=2204.241mil|Location2.Y=2210.491mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.127mm) Between Pad U2-1(55.786mm,56.392mm) on Top Layer And Pad U2-2(55.786mm,55.742mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVAIQ34A3VRHJGISHBAQT0YTP1J0DF2WAWTTI4WCUXUQHQH1SUNNF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4242.82mil|Location2.X=4250.487mil|Location1.Y=2759.159mil|Location2.Y=2766.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4242.82mil|Location2.X=4250.487mil|Location1.Y=2759.159mil|Location2.Y=2766.825mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.254mm) Between Pad P1-12(107.865mm,70.18mm) on Multi-Layer And Pad P1-12(107.865mm,70.18mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4105.025mil|Location2.X=4112.691mil|Location1.Y=2715.852mil|Location2.Y=2723.518mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Controller\23D_ESC_Controller\23D_ESC_Controller.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4105.025mil|Location2.X=4112.691mil|Location1.Y=2715.852mil|Location2.Y=2723.518mil|Absolute=True">Hole To Hole Clearance Constraint: (Collision &lt; 0.254mm) Between Pad P1-6(104.365mm,69.08mm) on Multi-Layer And Pad P1-6(104.365mm,69.08mm) on Multi-Layer Pad/Via Touching Holes</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

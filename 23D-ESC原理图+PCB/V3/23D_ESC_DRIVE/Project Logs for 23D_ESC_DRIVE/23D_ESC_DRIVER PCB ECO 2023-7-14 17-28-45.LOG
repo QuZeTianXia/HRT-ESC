@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=*1 NewDesignator=1
+Change Component Designator: OldDesignator=*2 NewDesignator=2
+Change Component Designator: OldDesignator=*3 NewDesignator=3
+Change Component Designator: OldDesignator=*4 NewDesignator=4
+Change Net Name : Old Net Name=Net*1_5 New Net Name=Net1_5
+Change Net Name : Old Net Name=Net*2_5 New Net Name=Net2_5
+Change Net Name : Old Net Name=Net*3_5 New Net Name=Net3_5
+Change Net Name : Old Net Name=Net*4_5 New Net Name=Net4_5
+Added Room: Name=23D_ESC_DRIVER

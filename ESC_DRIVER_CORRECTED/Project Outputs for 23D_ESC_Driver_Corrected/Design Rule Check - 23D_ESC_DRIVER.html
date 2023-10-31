@@ -1,0 +1,605 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\%E8%BD%AF%E4%BB%B6\AD16save\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2023/9/10</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">13:09:09</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc" class="file"><acronym title="D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc">D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">24</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">59</td></tr>
+</table>
+</td>
+</table><a name="IDL3A03AVYKSSDPVOSVIFIFBBB4CE3HY25XG15Z5LPQD42B4ADCH1"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1DKWNB0124U1EMUX5BBYBU3NODZUO1UQUHETH4NXOEUVVO5415JB">Zero hole size multi-layer pad(s) detected</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIOBUQQHTSBWKL4AE2DICXGDGBHMJOM1CDDO43AFFEL0V4P4XTRUE">Multilayer Pads with 0 size Hole found</a></td>
+<td class="column2">12</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">24</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFEHNA4J3HSV4CWTB52JPNEFJ0IFIXWUUXJZE2VMJNV2BOZXAMC0M">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDJH1ZMU5VPFKMBO5XZ0UUDIXZL1Y2PRM3DOESAHK2WPB5CNSKTCC">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDCIQW0QNE1IULOYSRSKUZCTUAGCZ4EBXRIMMLGLXMG0BWPR2OJWE">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1UJPHPLCEFT3BYKAYGDX2CYHECI5C1UT1P0VV0GBKY3CTYXMRVSB">Silk To Solder Mask (Clearance=1mil) (IsPad),(All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDP0BKNX5V1FKPD2BR5A42MYKA3PM3WBNCN1WDTLBJL31CJ410CIOD">Minimum Solder Mask Sliver (Gap=7mil) (All),(All)</a></td>
+<td class="column2">43</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKD3RTNQJBRUFIQ2BLHSVCGSKHK14WVZYQJS1GVHH2UFWLUHJKZ3L">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSAY2R5LW5FIYEQGDKXFCJPBEQNYZGMMOAVNG4FK4QIFXYHGIPJXJ">Hole Size Constraint (Min=1mil) (Max=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA00BNZCV4LR2ECPQRLJSMMRDBKSWNUAGD5RG2NNAZQW5BRMORJ2D">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJHGTEVSK2C44ETT5MBROZ2MVQF40KBQTMQ4HE1GQEZ143RHFBARN">Width Constraint (Min=10mil) (Max=80mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4VLUYNF2LXWVEZUMXDLC4U5TUHMUATCDXELGOFMDNSIKYYKFH2KF">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTFW5DUWAMGCBLFAUH1LD4ST4OJ1JEIPXLFPGJ0BFEDTL2KOQWE5L">Clearance Constraint (Gap=25mil) (InPoly),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJTSV3QEIUBY1PMJTN3PW5IVN1O33UEK4S1QIUII3S1ACDTXQ0QZG">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVC2T2PFXXC5DFQD3V5OM3T53QEP2SYBX5XVBOFFAOOASUKOE0QYK">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWFVV2CUH0EOGOEGXXKL13O3ADGYHTYADTDS44BPGMMQW5UUDBK2L">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">59</td>
+</tr>
+</table><br><a name="IDZHVJ55HNL2JT1GEUUCWLZHSLDMGCU04C2M3W3CDQSGRLHTPXRWP"><h2>Warnings</h2></a><a name="ID1DKWNB0124U1EMUX5BBYBU3NODZUO1UQUHETH4NXOEUVVO5415JB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Zero hole size multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True">Pad 4-21(3413.82mil,2730mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True">Pad 4-21(3413.82mil,2190mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.82mil|Location2.X=3542.82mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.82mil|Location2.X=3542.82mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True">Pad 4-21(3413.82mil,2460mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True">Pad 3-21(2050mil,2730mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True">Pad 3-21(2050mil,2190mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True">Pad 3-21(2050mil,2460mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True">Pad 2-21(3413.918mil,4410mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True">Pad 2-21(3413.918mil,3870mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.918mil|Location2.X=3542.918mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.918mil|Location2.X=3542.918mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True">Pad 2-21(3413.918mil,4140mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True">Pad 1-21(2050mil,4410mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True">Pad 1-21(2050mil,3870mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True">Pad 1-21(2050mil,4140mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1217.535mil|Location2.X=4980mil|Location1.Y=1655mil|Location2.Y=4740mil|Absolute=True">Net POWERGND</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDIOBUQQHTSBWKL4AE2DICXGDGBHMJOM1CDDO43AFFEL0V4P4XTRUE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Multilayer Pads with 0 size Hole found</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True">Pad 4-21(3413.82mil,2730mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.82mil|Location2.X=3487.82mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True">Pad 4-21(3413.82mil,2190mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.82mil|Location2.X=3542.82mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.82mil|Location2.X=3542.82mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True">Pad 4-21(3413.82mil,2460mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2656mil|Location2.Y=2804mil|Absolute=True">Pad 3-21(2050mil,2730mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=2116mil|Location2.Y=2264mil|Absolute=True">Pad 3-21(2050mil,2190mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=2256mil|Location2.Y=2664mil|Absolute=True">Pad 3-21(2050mil,2460mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True">Pad 2-21(3413.918mil,4410mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.918mil|Location2.X=3487.918mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True">Pad 2-21(3413.918mil,3870mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.918mil|Location2.X=3542.918mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3284.918mil|Location2.X=3542.918mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True">Pad 2-21(3413.918mil,4140mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=4336mil|Location2.Y=4484mil|Absolute=True">Pad 1-21(2050mil,4410mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1976mil|Location2.X=2124mil|Location1.Y=3796mil|Location2.Y=3944mil|Absolute=True">Pad 1-21(2050mil,3870mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921mil|Location2.X=2179mil|Location1.Y=3936mil|Location2.Y=4344mil|Absolute=True">Pad 1-21(2050mil,4140mil) on Multi-Layer</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDDJH1ZMU5VPFKMBO5XZ0UUDIXZL1Y2PRM3DOESAHK2WPB5CNSKTCC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=3007.5mil|Location2.Y=3074.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=3007.5mil|Location2.Y=3074.302mil|Absolute=True">Net Antennae: Via (4746mil,3025mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=3007.5mil|Location2.Y=3074.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=3007.5mil|Location2.Y=3074.302mil|Absolute=True">Net Antennae: Via (4707mil,3025mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=2952.5mil|Location2.Y=3019.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=2952.5mil|Location2.Y=3019.302mil|Absolute=True">Net Antennae: Via (4746mil,2970mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=2952.5mil|Location2.Y=3019.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=2952.5mil|Location2.Y=3019.302mil|Absolute=True">Net Antennae: Via (4707mil,2970mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=3067.5mil|Location2.Y=3134.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=3067.5mil|Location2.Y=3134.302mil|Absolute=True">Net Antennae: Via (4746mil,3085mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=3067.5mil|Location2.Y=3134.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=3067.5mil|Location2.Y=3134.302mil|Absolute=True">Net Antennae: Via (4707mil,3085mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=2902.5mil|Location2.Y=2969.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.5mil|Location2.X=4771.681mil|Location1.Y=2902.5mil|Location2.Y=2969.302mil|Absolute=True">Net Antennae: Via (4746mil,2920mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=2902.5mil|Location2.Y=2969.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4689.5mil|Location2.X=4732.681mil|Location1.Y=2902.5mil|Location2.Y=2969.302mil|Absolute=True">Net Antennae: Via (4707mil,2920mil) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1UJPHPLCEFT3BYKAYGDX2CYHECI5C1UT1P0VV0GBKY3CTYXMRVSB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=1mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3362.987mil|Location2.X=3364.653mil|Location1.Y=2779.167mil|Location2.Y=2780.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3362.987mil|Location2.X=3364.653mil|Location1.Y=2779.167mil|Location2.Y=2780.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (3189.84mil,2780mil)(3637.84mil,2780mil) on Top Overlay And Pad 4-21(3413.82mil,2730mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3462.987mil|Location2.X=3464.653mil|Location1.Y=2139.167mil|Location2.Y=2140.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3462.987mil|Location2.X=3464.653mil|Location1.Y=2139.167mil|Location2.Y=2140.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (3189.84mil,2140mil)(3593.84mil,2140mil) on Top Overlay And Pad 4-21(3413.82mil,2190mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1999.167mil|Location2.X=2000.833mil|Location1.Y=2779.167mil|Location2.Y=2780.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1999.167mil|Location2.X=2000.833mil|Location1.Y=2779.167mil|Location2.Y=2780.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (1826.02mil,2780mil)(2274.02mil,2780mil) on Top Overlay And Pad 3-21(2050mil,2730mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2099.167mil|Location2.X=2100.833mil|Location1.Y=2139.167mil|Location2.Y=2140.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2099.167mil|Location2.X=2100.833mil|Location1.Y=2139.167mil|Location2.Y=2140.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (1826.02mil,2140mil)(2230.02mil,2140mil) on Top Overlay And Pad 3-21(2050mil,2190mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3363.085mil|Location2.X=3364.751mil|Location1.Y=4459.167mil|Location2.Y=4460.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3363.085mil|Location2.X=3364.751mil|Location1.Y=4459.167mil|Location2.Y=4460.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (3189.938mil,4460mil)(3637.938mil,4460mil) on Top Overlay And Pad 2-21(3413.918mil,4410mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3463.085mil|Location2.X=3464.751mil|Location1.Y=3819.167mil|Location2.Y=3820.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3463.085mil|Location2.X=3464.751mil|Location1.Y=3819.167mil|Location2.Y=3820.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (3189.938mil,3820mil)(3593.938mil,3820mil) on Top Overlay And Pad 2-21(3413.918mil,3870mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1999.167mil|Location2.X=2000.833mil|Location1.Y=4459.167mil|Location2.Y=4460.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1999.167mil|Location2.X=2000.833mil|Location1.Y=4459.167mil|Location2.Y=4460.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (1826.02mil,4460mil)(2274.02mil,4460mil) on Top Overlay And Pad 1-21(2050mil,4410mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2099.167mil|Location2.X=2100.833mil|Location1.Y=3819.167mil|Location2.Y=3820.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2099.167mil|Location2.X=2100.833mil|Location1.Y=3819.167mil|Location2.Y=3820.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Track (1826.02mil,3820mil)(2230.02mil,3820mil) on Top Overlay And Pad 1-21(2050mil,3870mil) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDP0BKNX5V1FKPD2BR5A42MYKA3PM3WBNCN1WDTLBJL31CJ410CIOD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=7mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2845.797mil|Location2.X=2855.047mil|Location1.Y=4127.765mil|Location2.Y=4136.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2845.797mil|Location2.X=2855.047mil|Location1.Y=4127.765mil|Location2.Y=4136.302mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.414mil &lt; 7mil) Between Via (2840mil,4120mil) from Top Layer to Bottom Layer And Pad L3-1(2875mil,4165mil) on Top Layer [Top Solder] Mask Sliver [3.414mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4190.875mil|Location2.Y=4199.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4190.875mil|Location2.Y=4199.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4699mil,4195mil) from Top Layer to Bottom Layer And Pad J4-1(4603mil,4275mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4300.875mil|Location2.Y=4309.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4300.875mil|Location2.Y=4309.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4699mil,4305mil) from Top Layer to Bottom Layer And Pad J4-1(4603mil,4275mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4350.875mil|Location2.Y=4359.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4350.875mil|Location2.Y=4359.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4699mil,4355mil) from Top Layer to Bottom Layer And Pad J4-1(4603mil,4275mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4245.875mil|Location2.Y=4254.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4679.375mil|Location2.X=4687.625mil|Location1.Y=4245.875mil|Location2.Y=4254.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4699mil,4250mil) from Top Layer to Bottom Layer And Pad J4-1(4603mil,4275mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4190.875mil|Location2.Y=4199.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4190.875mil|Location2.Y=4199.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4738mil,4195mil) from Top Layer to Bottom Layer And Pad J3-1(4833mil,4275mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4300.875mil|Location2.Y=4309.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4300.875mil|Location2.Y=4309.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4738mil,4305mil) from Top Layer to Bottom Layer And Pad J3-1(4833mil,4275mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4350.875mil|Location2.Y=4359.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4350.875mil|Location2.Y=4359.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4738mil,4355mil) from Top Layer to Bottom Layer And Pad J3-1(4833mil,4275mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4245.875mil|Location2.Y=4254.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.875mil|Location2.X=4757.125mil|Location1.Y=4245.875mil|Location2.Y=4254.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4738mil,4250mil) from Top Layer to Bottom Layer And Pad J3-1(4833mil,4275mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=2915.875mil|Location2.Y=2924.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=2915.875mil|Location2.Y=2924.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4707mil,2920mil) from Top Layer to Bottom Layer And Pad J2-1(4612mil,3005mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=3020.875mil|Location2.Y=3029.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=3020.875mil|Location2.Y=3029.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4707mil,3025mil) from Top Layer to Bottom Layer And Pad J2-1(4612mil,3005mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=3080.875mil|Location2.Y=3089.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=3080.875mil|Location2.Y=3089.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4707mil,3085mil) from Top Layer to Bottom Layer And Pad J2-1(4612mil,3005mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=2965.875mil|Location2.Y=2974.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4687.875mil|Location2.X=4696.125mil|Location1.Y=2965.875mil|Location2.Y=2974.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4707mil,2970mil) from Top Layer to Bottom Layer And Pad J2-1(4612mil,3005mil) on Top Layer [Top Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=2915.875mil|Location2.Y=2924.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=2915.875mil|Location2.Y=2924.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4746mil,2920mil) from Top Layer to Bottom Layer And Pad J1-1(4842mil,3005mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=3020.875mil|Location2.Y=3029.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=3020.875mil|Location2.Y=3029.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4746mil,3025mil) from Top Layer to Bottom Layer And Pad J1-1(4842mil,3005mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=3080.875mil|Location2.Y=3089.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=3080.875mil|Location2.Y=3089.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4746mil,3085mil) from Top Layer to Bottom Layer And Pad J1-1(4842mil,3005mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=2965.875mil|Location2.Y=2974.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4757.375mil|Location2.X=4765.625mil|Location1.Y=2965.875mil|Location2.Y=2974.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3mil &lt; 7mil) Between Via (4746mil,2970mil) from Top Layer to Bottom Layer And Pad J1-1(4842mil,3005mil) on Top Layer [Top Solder] Mask Sliver [3mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4075.875mil|Location2.X=4084.125mil|Location1.Y=2065.151mil|Location2.Y=2073.401mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4075.875mil|Location2.X=4084.125mil|Location1.Y=2065.151mil|Location2.Y=2073.401mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (6.551mil &lt; 7mil) Between Via (4080mil,2050mil) from Top Layer to Bottom Layer And Pad VT2-3(4029.228mil,2106.551mil) on Top Layer [Top Solder] Mask Sliver [6.551mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1732.248mil|Location2.X=1740.498mil|Location1.Y=2680.875mil|Location2.Y=2689.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1732.248mil|Location2.X=1740.498mil|Location1.Y=2680.875mil|Location2.Y=2689.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.747mil &lt; 7mil) Between Via (1720mil,2685mil) from Top Layer to Bottom Layer And Pad 3-11(1776.18mil,2685mil) on Top Layer [Top Solder] Mask Sliver [4.747mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1732.248mil|Location2.X=1740.498mil|Location1.Y=3910.875mil|Location2.Y=3919.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1732.248mil|Location2.X=1740.498mil|Location1.Y=3910.875mil|Location2.Y=3919.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.747mil &lt; 7mil) Between Via (1720mil,3915mil) from Top Layer to Bottom Layer And Pad 1-20(1776.18mil,3915mil) on Top Layer [Top Solder] Mask Sliver [4.747mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3409.695mil|Location2.X=3417.945mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3409.695mil|Location2.X=3417.945mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (3413.82mil,2636.428mil) from Top Layer to Bottom Layer And Pad 4-21(3413.82mil,2730mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3457.195mil|Location2.X=3465.445mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3457.195mil|Location2.X=3465.445mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (3461.32mil,2636.428mil) from Top Layer to Bottom Layer And Pad 4-21(3413.82mil,2730mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3362.195mil|Location2.X=3370.445mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3362.195mil|Location2.X=3370.445mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (3366.32mil,2636.428mil) from Top Layer to Bottom Layer And Pad 4-21(3413.82mil,2730mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2045.875mil|Location2.X=2054.125mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2045.875mil|Location2.X=2054.125mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (2050mil,2636.428mil) from Top Layer to Bottom Layer And Pad 3-21(2050mil,2730mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2093.375mil|Location2.X=2101.625mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2093.375mil|Location2.X=2101.625mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (2097.5mil,2636.428mil) from Top Layer to Bottom Layer And Pad 3-21(2050mil,2730mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1998.375mil|Location2.X=2006.625mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1998.375mil|Location2.X=2006.625mil|Location1.Y=2649.089mil|Location2.Y=2657.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (2002.5mil,2636.428mil) from Top Layer to Bottom Layer And Pad 3-21(2050mil,2730mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3409.793mil|Location2.X=3418.043mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3409.793mil|Location2.X=3418.043mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (3413.918mil,4316.428mil) from Top Layer to Bottom Layer And Pad 2-21(3413.918mil,4410mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3457.293mil|Location2.X=3465.543mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3457.293mil|Location2.X=3465.543mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (3461.418mil,4316.428mil) from Top Layer to Bottom Layer And Pad 2-21(3413.918mil,4410mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3362.293mil|Location2.X=3370.543mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3362.293mil|Location2.X=3370.543mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (3366.418mil,4316.428mil) from Top Layer to Bottom Layer And Pad 2-21(3413.918mil,4410mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2045.875mil|Location2.X=2054.125mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2045.875mil|Location2.X=2054.125mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (2050mil,4316.428mil) from Top Layer to Bottom Layer And Pad 1-21(2050mil,4410mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2093.375mil|Location2.X=2101.625mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2093.375mil|Location2.X=2101.625mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (2097.5mil,4316.428mil) from Top Layer to Bottom Layer And Pad 1-21(2050mil,4410mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1998.375mil|Location2.X=2006.625mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1998.375mil|Location2.X=2006.625mil|Location1.Y=4329.089mil|Location2.Y=4337.339mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.572mil &lt; 7mil) Between Via (2002.5mil,4316.428mil) from Top Layer to Bottom Layer And Pad 1-21(2050mil,4410mil) on Multi-Layer [Top Solder] Mask Sliver [5.572mil] / [Bottom Solder] Mask Sliver [5.572mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3745.875mil|Location2.Y=3754.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3745.875mil|Location2.Y=3754.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3955mil,3765mil) from Top Layer to Bottom Layer And Via (3955mil,3735mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3745.875mil|Location2.Y=3754.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3745.875mil|Location2.Y=3754.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3915mil,3735mil) from Top Layer to Bottom Layer And Via (3915mil,3765mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3775.875mil|Location2.Y=3784.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3775.875mil|Location2.Y=3784.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3915mil,3795mil) from Top Layer to Bottom Layer And Via (3915mil,3765mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3835.875mil|Location2.Y=3844.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3835.875mil|Location2.Y=3844.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3915mil,3825mil) from Top Layer to Bottom Layer And Via (3915mil,3855mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4073.234mil|Location2.X=4081.484mil|Location1.Y=2064.365mil|Location2.Y=2072.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4073.234mil|Location2.X=4081.484mil|Location1.Y=2064.365mil|Location2.Y=2072.615mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.355mil &lt; 7mil) Between Via (4075mil,2085mil) from Top Layer to Bottom Layer And Via (4080mil,2050mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [5.355mil] / [Bottom Solder] Mask Sliver [5.355mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4230.875mil|Location2.X=4239.125mil|Location1.Y=1865.875mil|Location2.Y=1874.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4230.875mil|Location2.X=4239.125mil|Location1.Y=1865.875mil|Location2.Y=1874.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (4220mil,1870mil) from Top Layer to Bottom Layer And Via (4250mil,1870mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3805.875mil|Location2.Y=3814.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.875mil|Location2.X=3919.125mil|Location1.Y=3805.875mil|Location2.Y=3814.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3915mil,3795mil) from Top Layer to Bottom Layer And Via (3915mil,3825mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3805.875mil|Location2.Y=3814.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3805.875mil|Location2.Y=3814.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3955mil,3795mil) from Top Layer to Bottom Layer And Via (3955mil,3825mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3835.875mil|Location2.Y=3844.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3835.875mil|Location2.Y=3844.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3955mil,3855mil) from Top Layer to Bottom Layer And Via (3955mil,3825mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3775.875mil|Location2.Y=3784.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3950.875mil|Location2.X=3959.125mil|Location1.Y=3775.875mil|Location2.Y=3784.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2mil &lt; 7mil) Between Via (3955mil,3795mil) from Top Layer to Bottom Layer And Via (3955mil,3765mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2mil] / [Bottom Solder] Mask Sliver [2mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E6%8A%80%E6%9C%AF%E6%96%87%E4%BB%B6\HRT\ESC\23D-ESC%E5%8E%9F%E7%90%86%E5%9B%BE+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1520.875mil|Location2.X=1529.125mil|Location1.Y=4155.875mil|Location2.Y=4164.125mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\技术文件\HRT\ESC\23D-ESC原理图+PCB\V3\23D_ESC_Driver_Corrected\23D_ESC_Driver_Corrected\23D_ESC_DRIVER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1520.875mil|Location2.X=1529.125mil|Location1.Y=4155.875mil|Location2.Y=4164.125mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4mil &lt; 7mil) Between Via (1525mil,4140mil) from Top Layer to Bottom Layer And Via (1525mil,4180mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [4mil] / [Bottom Solder] Mask Sliver [4mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

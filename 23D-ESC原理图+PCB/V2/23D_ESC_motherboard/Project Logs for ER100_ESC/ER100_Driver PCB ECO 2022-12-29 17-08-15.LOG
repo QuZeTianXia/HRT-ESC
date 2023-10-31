@@ -1,0 +1,4 @@
+Added Component: Designator=D?(DO-214)
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component D? V40PWM45C
+Added Member To Class: ClassName=HRT_D ER100 V1.0 Member=Component U5 MX34_28
+Added Room: Name=HRT_D ER100 V1.0
